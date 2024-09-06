@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../assets/fonts/my-custom-font.woff2') format('woff2'),
+         url('../assets/fonts/my-custom-font.woff') format('woff'),
+         url('../assets/fonts/my-custom-font.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  // Uso de la fuente en el archivo base o global
+  body {
+    font-family: 'MyCustomFont', sans-serif;
+  }
+  

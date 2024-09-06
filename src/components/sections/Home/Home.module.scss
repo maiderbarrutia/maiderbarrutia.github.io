@@ -1,0 +1,13 @@
+@import '../../../assets/styles/main.scss';
+.home{
+    background-color: $main-gray;
+    min-height: 100%;
+    box-sizing: border-box;
+    position: relative;
+
+    .text{
+        background-color: blueviolet;
+        position: absolute;
+        bottom: 0;
+    }
+}

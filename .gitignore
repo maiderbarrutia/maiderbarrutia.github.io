@@ -1,0 +1,70 @@
+# Node modules
+node_modules/
+
+# Build output
+dist/
+build/
+*.log
+
+# Dependency directories
+jspm_packages/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs_analysis.dat
+*.njsproj
+*.sln
+*.sw?
+*.DS_Store
+*.vscode/
+*.code-workspace
+
+# Operating System files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+ehthumbs.db
+Icon?
+Desktop.ini
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build directories
+/dist
+/build
+/.next
+/out
+
+# Generated files
+*.pid
+*.seed
+*.sql
+*.sqlite
+
+# TypeScript
+*.tsbuildinfo
+
+# Next.js
+.next/
+out/
+

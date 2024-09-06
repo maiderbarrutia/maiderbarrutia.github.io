@@ -1,0 +1,122 @@
+@import '../../../assets/styles/main.scss';
+
+.header {
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &_logo{
+        &_link{
+            display: flex;
+            align-items: center;
+            gap: rem(10);
+            text-decoration: none;
+        }
+
+        &_text{
+            font-size: rem(18);
+            font-weight: bold;
+            color: $main-black;
+            display: none;
+        }
+    }
+
+    &_button {
+        display: block; // Mostrar el botón en pantallas pequeñas
+    }
+
+    &_nav {
+        display: none; // Ocultar el menú por defecto en pantallas pequeñas
+        opacity: 0;
+        flex-direction: column; // Menú en columna en pantallas pequeñas
+        transition: opacity 0.3s ease; // Transición para el efecto de desvanecimiento
+    }
+
+    &_nav.isActive {
+        display: flex; // Mostrar el menú cuando esté activo
+        opacity: 1;
+        height: 50vh; // Ajusta según sea necesario
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        background-color: #f8f9fa;
+    }
+    
+
+    &_mainMenu {
+        display: flex;
+        flex-direction: column; // Menú en columna en pantallas pequeñas
+        justify-content: center;
+        gap: rem(10); // Ajustar según sea necesario
+
+        &_link{
+            text-decoration: none;
+            color: $main-black;
+        }
+    }
+
+    &_li {
+        padding-top: rem(20); // Ajustar según sea necesario
+        padding-bottom: rem(20); // Ajustar según sea necesario
+    }
+
+    
+
+    &.fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        // background-color: $main-gray;
+        transform: translateY(0);
+    }
+
+    &:not(.fixed) {
+        transform: translateY(-100%); 
+    }
+
+    &.scrolled{
+        background-color: $main-gray;
+        
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .header {
+        &_button {
+            display: none;
+        }
+
+        &_nav {
+            display: flex;
+            opacity: 1;
+            flex-direction: row; 
+            height: auto; 
+            gap: rem(20);
+            align-items: center;
+        }
+
+        &_mainMenu {
+            flex-direction: row;
+            gap: rem(10);
+        }
+
+        &_rrssMenu{
+            display: flex;
+            gap: rem(10);
+        }
+
+        &_li {
+            padding: 0 rem(20);
+        }
+    }
+}
