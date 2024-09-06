@@ -9,29 +9,11 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
+
 section{
   height: 500px;
 }
-  
-// html, body {
-//     height: 100%;
-//     margin: 0;
-//   }
-  
-//   body {
-//     display: grid;
-//     grid-template-rows: auto 1fr auto; /* Tres filas: header, main, footer */
-//     min-height: 100vh; /* Asegura que el body ocupe al menos la altura completa de la ventana */
-//   }
-  
-//   #root {
-//     display: grid;
-//     grid-template-rows: auto 1fr auto; /* Tres filas: header, main, footer */
-//     min-height: 100vh; /* Asegura que el root ocupe al menos la altura completa de la ventana */
-//   }
-
-  
-//   main {
-//     grid-row: 2; /* Coloca el main en la segunda fila del grid */
-//     overflow: hidden; /* Permite el desplazamiento si el contenido excede la altura disponible */
-//   }

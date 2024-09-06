@@ -5,69 +5,74 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: rem(15);
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease;
 
-    &_logo{
-        &_link{
-            display: flex;
-            align-items: center;
-            gap: rem(10);
-            text-decoration: none;
-        }
+    &_logo_link{
+        display: flex;
+        align-items: center;
+        gap: rem(10);
+        text-decoration: none;
+    }
 
-        &_text{
-            font-size: rem(18);
-            font-weight: bold;
-            color: $main-black;
-            display: none;
-        }
+    &_logo_text{
+        font-size: rem(18);
+        font-weight: bold;
+        color: $main-black;
+        display: none;
     }
 
     &_button {
-        display: block; // Mostrar el botón en pantallas pequeñas
+        display: block;
+        border: none;
+        background-color: transparent;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
     }
 
     &_nav {
-        display: none; // Ocultar el menú por defecto en pantallas pequeñas
+        display: none;
         opacity: 0;
-        flex-direction: column; // Menú en columna en pantallas pequeñas
-        transition: opacity 0.3s ease; // Transición para el efecto de desvanecimiento
+        flex-direction: column;
+        transition: opacity 0.3s ease;
+        padding: rem(15);
+        gap: rem(20);
     }
 
     &_nav.isActive {
-        display: flex; // Mostrar el menú cuando esté activo
+        display: flex;
         opacity: 1;
-        height: 50vh; // Ajusta según sea necesario
         flex-direction: column;
         position: absolute;
         top: 60px;
         left: 0;
         width: 100%;
         z-index: 1;
-        background-color: #f8f9fa;
+        background-color: $main-gray;
     }
     
-
     &_mainMenu {
         display: flex;
-        flex-direction: column; // Menú en columna en pantallas pequeñas
+        flex-direction: column;
         justify-content: center;
-        gap: rem(10); // Ajustar según sea necesario
+        gap: rem(20);
+    }
 
-        &_link{
-            text-decoration: none;
-            color: $main-black;
+    &_mainMenu_link{
+        text-decoration: none;
+        color: $main-black;
+
+        &:hover, &.selected{
+            color: $primary-color;
         }
     }
 
-    &_li {
-        padding-top: rem(20); // Ajustar según sea necesario
-        padding-bottom: rem(20); // Ajustar según sea necesario
+    &_rrssMenu{
+        display: flex;
+        gap: rem(10);
     }
-
-    
 
     &.fixed {
         position: fixed;
@@ -75,7 +80,6 @@
         left: 0;
         width: 100%;
         z-index: 1000;
-        // background-color: $main-gray;
         transform: translateY(0);
     }
 
@@ -85,7 +89,6 @@
 
     &.scrolled{
         background-color: $main-gray;
-        
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 }
@@ -103,20 +106,12 @@
             height: auto; 
             gap: rem(20);
             align-items: center;
+            padding: 0;
         }
 
         &_mainMenu {
             flex-direction: row;
             gap: rem(10);
-        }
-
-        &_rrssMenu{
-            display: flex;
-            gap: rem(10);
-        }
-
-        &_li {
-            padding: 0 rem(20);
         }
     }
 }

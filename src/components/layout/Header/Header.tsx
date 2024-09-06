@@ -4,15 +4,14 @@ import styles from './Header.module.scss';
 import maiIcon from '/assets/icons/mai-icon.svg';
 import githubIcon from '../../../assets/icons/github-icon.svg';
 import linkedinIcon from '../../../assets/icons/linkedin-icon.svg';
-import arrowDownIcon from '../../../assets/icons/arrow-down.svg';
 import menuIcon from '../../../assets/icons/menu-icon.svg';
-// import { Link } from 'react-router-dom';
 
 
 const Header = () => {
-    const [menu, setMenu] = useState(false);
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 480);
-    const [isScrolled, setIsScrolled] = useState(false);
+    const [menu, setMenu] = useState<boolean>(false);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
+    const [isScrolled, setIsScrolled] = useState<boolean>(false);
+    const [selectedLink, setSelectedLink] = useState<string>('#home');
     const headerRef = useRef<HTMLElement | null>(null);
     const navRef = useRef<HTMLDivElement | null>(null);
 
@@ -20,6 +19,13 @@ const Header = () => {
         if (isMobile) {
             setMenu(prevMenu => !prevMenu);
         }
+    };
+
+    const closeMenu = (link:string) => {
+        if (isMobile) {
+            setMenu(false);
+        }
+        setSelectedLink(link);
     };
 
     const handleResize = () => {
@@ -38,9 +44,7 @@ const Header = () => {
             }
         };
 
-        // Añadir el evento de scroll
         window.addEventListener('scroll', handleScroll);
-        // Llamar a handleScroll al montar el componente
         handleScroll();
 
         return () => {
@@ -67,39 +71,6 @@ const Header = () => {
 
 
     return (
-        // <header className={styles.header}>
-        //     <nav>
-        //         {/* <ul>
-        //             <li>
-        //             <Link to="/">Home</Link>
-        //             </li>
-        //             <li>
-        //             <Link to="/about">About</Link>
-        //             </li>
-        //             <li>
-        //             <Link to="/projects">Projects</Link>
-        //             </li>
-        //             <li>
-        //             <Link to="/contact">Contact</Link>
-        //             </li>
-        //         </ul> */}
-        //         <ul>
-        //             <li>
-        //             <a href="#home">Home</a>
-        //             </li>
-        //             <li>
-        //             <a href="#about">About</a>
-        //             </li>
-        //             <li>
-        //             <a href="#projects">Projects</a>
-        //             </li>
-        //             <li>
-        //             <a href="#contact">Contact</a>
-        //             </li>
-        //         </ul>
-        //     </nav>
-        // </header>
-
         <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${styles.fixed}`} ref={headerRef}>
             <h1 className={styles.header_logo}>
                 <a href="/" className={styles.header_logo_link}>
@@ -115,20 +86,27 @@ const Header = () => {
                 
             </button>
 
-            {/* <nav className={ `header_nav ${ menu ? 'isActive' : '' }` }> */}
             <nav className={`${styles.header_nav} ${menu && isMobile ? styles.isActive : ''}`} ref={navRef}>
                 <ul className={styles.header_mainMenu}>
                     <li>
-                        <a className={styles.header_mainMenu_link} href="#home">Home</a>
+                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#home' ? styles.selected : ''}`} onClick={() => closeMenu('#home')} href="#home">
+                                Home
+                        </a>
                     </li>
                     <li>
-                        <a className={styles.header_mainMenu_link} href="#about">About</a>
+                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#about' ? styles.selected : ''}`} onClick={() => closeMenu('#about')} href="#about">
+                            About
+                        </a>
                     </li>
                     <li>
-                        <a className={styles.header_mainMenu_link} href="#projects">Projects</a>
+                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#projects' ? styles.selected : ''}`} onClick={() => closeMenu('#projects')}href="#projects">
+                             Projects
+                        </a>
                     </li>
                     <li>
-                        <a className={styles.header_mainMenu_link} href="#contact">Contact</a>
+                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#contact' ? styles.selected : ''}`} onClick={() => closeMenu('#contact')} href="#contact">
+                            Contact
+                        </a>
                     </li>
                 </ul>
 
@@ -144,17 +122,6 @@ const Header = () => {
                         </a>
                     </li>
                 </ul>
-                {/* <div className={styles.header_languages}>
-                    <div className={styles.header_selectedLanguage}>
-                        <span></span>
-                        <img src={arrowDownIcon} alt=""/>
-                    </div>
-                    <ul className={styles.header_languageList}>
-                        <li className={styles.header_spanish}><a href="/">Es</a></li>
-                        <li className={styles.header_english}><a href="./en">En</a></li>
-                        <li className={styles.header_euskera}><a href="/">Eu</a></li>
-                    </ul>
-                </div> */}
             </nav>
         </header>
     )
