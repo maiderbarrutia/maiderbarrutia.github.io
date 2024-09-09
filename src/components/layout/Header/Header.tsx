@@ -90,7 +90,7 @@ const Header = () => {
                 <ul className={styles.header_mainMenu}>
                     <li>
                         <a className={`${styles.header_mainMenu_link} ${selectedLink === '#home' ? styles.selected : ''}`} onClick={() => closeMenu('#home')} href="#home">
-                                Home
+                            Home
                         </a>
                     </li>
                     <li>

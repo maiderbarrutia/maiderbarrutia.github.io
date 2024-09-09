@@ -1,0 +1,20 @@
+@import '../../../assets/styles/main.scss';
+
+.button {
+    display: block;
+    margin: rem(20) auto;
+    background-color: $primary-color;
+    color: $main-black;
+    border: none;
+    padding: rem(20) rem(40);
+    font-size: rem(18);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $main-black;
+      color: $white;
+    }
+}
+  
