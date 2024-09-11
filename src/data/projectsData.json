@@ -3,61 +3,91 @@
       "id": 1,
       "title": "Proyecto 1",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/1.jpg"
+      "image": "../../src/assets/images/1.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 2,
       "title": "Proyecto 2",
       "category": "Desarrollo web frontend",
-      "image": "../../src/assets/images/2.jpg"
+      "image": "../../src/assets/images/2.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 3,
       "title": "Proyecto 3",
       "category": "Desarrollo web frontend",
-      "image": "../../src/assets/images/3.jpg"
+      "image": "../../src/assets/images/3.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 4,
       "title": "Proyecto 4",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 5,
       "title": "Proyecto 5",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/1.jpg"
+      "image": "../../src/assets/images/1.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 6,
       "title": "Proyecto 6",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 7,
       "title": "Proyecto 7",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 8,
       "title": "Proyecto 8",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 9,
       "title": "Proyecto 9",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     },
     {
       "id": 10,
       "title": "Proyecto 10",
       "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg"
+      "image": "../../src/assets/images/4.jpg",
+      "description": "Descripción del Proyecto 1.",
+      "year": "2023",
+      "link": "../../src/pages/projects/projectDetails.tsx"
     }
   ]
   

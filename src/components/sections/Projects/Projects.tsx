@@ -3,30 +3,35 @@ import Masonry from 'react-masonry-css';
 import styles from './Projects.module.scss'; 
 import projectsData from '../../../data/projectsData.json';
 import Button from '../../common/Button/Button';
+import { Link } from 'react-router-dom';
 
+// Definimos el tipo para los proyectos
 interface Project {
   id: number;
   title: string;
   category: string;
   image: string;
+  link: string;
 }
 
 const categories = ['Todo', 'Diseño grafico', 'Desarrollo web frontend'];
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('Todo');
-  const [visibleProjects, setVisibleProjects] = useState<number>(6); // Initial number of visible projects
+  const [visibleProjects, setVisibleProjects] = useState<number>(6);
 
-  // Convert JSON to an array of type Project
+  // Convertimos el JSON a un array de tipo Project
   const projects: Project[] = projectsData;
 
   const filterProjects = (category: string) => {
     setSelectedCategory(category);
-    setVisibleProjects(6);
+    setVisibleProjects(6); // Reinicia el número de proyectos visibles
   };
 
   const loadMoreProjects = () => {
-    setVisibleProjects((prevVisible) => prevVisible + 6);
+    if (visibleProjects < projectsData.length) {
+      setVisibleProjects((prev) => prev + 6);
+    }
   };
 
   const filteredProjects = selectedCategory === 'Todo'
@@ -57,19 +62,22 @@ const Projects: React.FC = () => {
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className={styles["masonry-grid"]}
-          columnClassName={styles["masonry-grid_column"]}
-        >
+          columnClassName={styles["masonry-grid_column"]}>
+          
           {filteredProjects.slice(0, visibleProjects).map((project) => (
             <article key={project.id} className={styles["project-card"]}>
               <img src={project.image} alt={project.title} />
-              <h3>{project.title}</h3>
-              <p>{project.category}</p>
+              <div className={styles["project-card-info"]}>
+                <h3>{project.title}</h3>
+                <p>{project.category}</p>
+                <Link to={`/projects/${project.id}`} className={styles["project-link"]}>Ver más</Link>
+              </div>
             </article>
           ))}
         </Masonry>
 
         {visibleProjects < filteredProjects.length && (
-          <Button text="Ver más" onClick={loadMoreProjects} />
+          <Button text="Ver más" onClick={loadMoreProjects} className={styles.loadMoreButton}/>
         )}
       </div>
     </section>
