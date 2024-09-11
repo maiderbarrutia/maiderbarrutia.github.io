@@ -1,13 +1,14 @@
 
 import { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from './Header.module.scss';
 import maiIcon from '/assets/icons/mai-icon.svg';
 import githubIcon from '../../../assets/icons/github-icon.svg';
 import linkedinIcon from '../../../assets/icons/linkedin-icon.svg';
 import menuIcon from '../../../assets/icons/menu-icon.svg';
 
-
 const Header = () => {
+    const location = useLocation();
     const [menu, setMenu] = useState<boolean>(false);
     const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -21,7 +22,7 @@ const Header = () => {
         }
     };
 
-    const closeMenu = (link:string) => {
+    const closeMenu = (link: string) => {
         if (isMobile) {
             setMenu(false);
         }
@@ -69,42 +70,60 @@ const Header = () => {
         };
     }, [menu]);
 
+    // Verificamos si la ruta es distinta de "/"
+    const isNotHomePage = location.pathname !== '/';
 
     return (
-        <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${styles.fixed}`} ref={headerRef}>
+        <header
+            className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${styles.fixed} ${isNotHomePage ? styles.intern : ''}`}
+            ref={headerRef}
+        >
             <h1 className={styles.header_logo}>
                 <a href="/" className={styles.header_logo_link}>
-                    <img src={maiIcon} height="60" width="58.79" alt="icono Mai"/>
-                    <p className={styles.header_logo_text}>maiWeb</p> 
+                    <img src={maiIcon} height="60" width="58.79" alt="icono Mai" />
+                    <p className={styles.header_logo_text}>maiWeb</p>
                 </a>
             </h1>
 
-            <button 
-                onClick={ toggleMenu }
-                className={styles.header_button}>
-                    <img src={menuIcon} height="16" width="16" alt="icono menu"/>
-                
+            <button onClick={toggleMenu} className={styles.header_button}>
+                <img src={menuIcon} height="16" width="16" alt="icono menu" />
             </button>
 
             <nav className={`${styles.header_nav} ${menu && isMobile ? styles.isActive : ''}`} ref={navRef}>
                 <ul className={styles.header_mainMenu}>
                     <li>
-                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#home' ? styles.selected : ''}`} onClick={() => closeMenu('#home')} href="#home">
+                        <a
+                            className={`${styles.header_mainMenu_link} ${selectedLink === '#home' ? styles.selected : ''}`}
+                            onClick={() => closeMenu('#home')}
+                            href="/#home"
+                        >
                             Home
                         </a>
                     </li>
                     <li>
-                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#about' ? styles.selected : ''}`} onClick={() => closeMenu('#about')} href="#about">
+                        <a
+                            className={`${styles.header_mainMenu_link} ${selectedLink === '#about' ? styles.selected : ''}`}
+                            onClick={() => closeMenu('#about')}
+                            href="/#about"
+                        >
                             About
                         </a>
                     </li>
                     <li>
-                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#projects' ? styles.selected : ''}`} onClick={() => closeMenu('#projects')}href="#projects">
-                             Projects
+                        <a
+                            className={`${styles.header_mainMenu_link} ${selectedLink === '#projects' ? styles.selected : ''}`}
+                            onClick={() => closeMenu('#projects')}
+                            href="/#projects"
+                        >
+                            Projects
                         </a>
                     </li>
                     <li>
-                        <a className={`${styles.header_mainMenu_link} ${selectedLink === '#contact' ? styles.selected : ''}`} onClick={() => closeMenu('#contact')} href="#contact">
+                        <a
+                            className={`${styles.header_mainMenu_link} ${selectedLink === '#contact' ? styles.selected : ''}`}
+                            onClick={() => closeMenu('#contact')}
+                            href="/#contact"
+                        >
                             Contact
                         </a>
                     </li>
@@ -113,17 +132,18 @@ const Header = () => {
                 <ul className={styles.header_rrssMenu}>
                     <li>
                         <a href="https://es.linkedin.com/in/maiderbarrutiaunzueta" target="_blank">
-                            <img src={linkedinIcon} height="30" width="30"/>
+                            <img src={linkedinIcon} height="30" width="30" />
                         </a>
                     </li>
                     <li>
                         <a href="https://github.com/maiderbarrutia" target="_blank">
-                            <img src={githubIcon} height="30" width="30"/>
+                            <img src={githubIcon} height="30" width="30" />
                         </a>
                     </li>
                 </ul>
             </nav>
         </header>
-    )
-}
-export default Header
+    );
+};
+
+export default Header;

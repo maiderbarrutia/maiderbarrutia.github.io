@@ -87,7 +87,7 @@
         transform: translateY(-100%); 
     }
 
-    &.scrolled{
+    &.scrolled, &.inside{
         background-color: $main-gray;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
