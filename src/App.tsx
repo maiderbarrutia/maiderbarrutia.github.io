@@ -1,7 +1,6 @@
-// import './assets/styles/main.scss';
 import SiteRoutes from './routes/routes';
 
-function App() {
+const App: React.FC = () => {
   return (
     <SiteRoutes />
   );

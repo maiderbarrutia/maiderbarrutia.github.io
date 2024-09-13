@@ -1,158 +1,23 @@
 @import '../../../assets/styles/main.scss';
 
+.projects {
+    background-color: $main-gray;
 
-.projects-container {
-    padding: rem(20);
-}
-
-.projects-nav {
-    display: flex;
-    justify-content: center;
-    margin-bottom: rem(20);
-    flex-wrap: wrap;
-    gap: rem(10) 0;
-
-    button {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: rem(14);
+    &__no-projects-message {
+        text-align: center;
+        font-size: rem(16);
         color: $main-black;
-        transition: all 0.3s;
-        text-transform: uppercase;
-        font-weight: 700;
-        padding: 0;
+        margin: rem(20) 0;
+    }
 
-        &.active, &:hover {
-            color: $primary-color;
-        }
+    &__masonry-grid {
+        display: flex;
+        margin-left: rem(-15);
+        width: auto;
 
-        &:not(:last-child)::after {
-            content: "/";
-            margin: 0 rem(15);
-            color: $main-black; 
+        &-column {
+            padding-left: rem(15);
+            background-clip: padding-box;
         }
     }
 }
-
-.masonry-grid {
-    display: flex;
-    margin-left: rem(-15);
-    width: auto;
-  
-    &_column {
-      padding-left: rem(15);
-      background-clip: padding-box;
-    }
-}
-
-// .project-card {
-//     // padding: rem(15);
-//     overflow: hidden;
-//     transition: transform 0.3s;
-//     margin-bottom: rem(15);
-
-//     img {
-//         width: 100%;
-//         height: auto;
-//         display: block;
-//     }
-
-//     h3 {
-//         margin: rem(10) 0 rem(5);
-//         font-size: rem(18);
-//     }
-
-//     p {
-//         font-size: rem(14);
-//         color: $main-black;
-//     }
-
-//     &:hover {
-//         transform: scale(1.05); 
-//     }
-// }
-
-.project-card {
-    margin-bottom: rem(15);
-    position: relative;
-    transition: all 0.5s;
-    overflow: hidden;
-  
-    img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-        object-position: center;
-    }
-  
-    &::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: rgba(93, 172, 109, 0.95);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-        z-index: 1;
-    }
-
-    &:hover {
-        &::before {
-            opacity: 1;
-        }
-    
-        .project-card-info {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1); // Restablece el tamaño completo al hacer hover
-        }
-    }
-}
-  
-.project-card-info {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    opacity: 0;
-    text-align: center;
-    transition: all 0.5s ease;
-    z-index: 2;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: rem(20);
-
-    h3 {
-        font-size: rem(18);
-        margin-bottom: rem(10);
-    }
-
-    p {
-        font-size: rem(14);
-        margin-bottom: rem(15);
-    }
-
-    .project-link {
-        background-color: #fff;
-        color: #333;
-        padding: rem(10) rem(20);
-        font-size: rem(14);
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: background-color 0.3s, color 0.3s;
-
-        &:hover {
-        background-color: #333;
-        color: #fff;
-        }
-    }
-}
-
-
-  

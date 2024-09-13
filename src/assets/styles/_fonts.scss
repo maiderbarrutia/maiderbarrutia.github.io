@@ -7,17 +7,17 @@ $font-weights: (
 );
 
 $fonts: (
-  'Roboto',
-  'Satisfy'
+  'roboto',
+  'satisfy'
 );
 
 @mixin font-face($font-family) {
   @each $weight, $name in $font-weights {
     @font-face {
       font-family: $font-family;
-      src: url('../fonts/#{$font-family}-#{$name}.woff2') format('woff2'),
-           url('../fonts/#{$font-family}-#{$name}.woff') format('woff'),
-           url('../fonts/#{$font-family}-#{$name}.ttf') format('truetype');
+      src: url('/src/assets/fonts/#{$font-family}-#{$name}.woff2') format('woff2'),
+           url('/src/assets/fonts/#{$font-family}-#{$name}.woff') format('woff'),
+           url('/src/assets/fonts/#{$font-family}-#{$name}.ttf') format('truetype');
       font-weight: $weight;
       font-style: normal;
     }

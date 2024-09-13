@@ -1,27 +1,30 @@
-
 import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
+import HeaderLogo from './HeaderLogo/HeaderLogo';
+import NavigationMenu from './NavigationMenu/NavigationMenu';
+import SocialLinks from './SocialLinks/SocialLinks';
 import styles from './Header.module.scss';
-import maiIcon from '/assets/icons/mai-icon.svg';
-import githubIcon from '../../../assets/icons/github-icon.svg';
-import linkedinIcon from '../../../assets/icons/linkedin-icon.svg';
 import menuIcon from '../../../assets/icons/menu-icon.svg';
 
-const Header = () => {
+const Header: React.FC = () => {
     const location = useLocation();
+    const navigate = useNavigate();
+    const MOBILE_BREAKPOINT = 576;
     const [menu, setMenu] = useState<boolean>(false);
-    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < 480);
+    const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < MOBILE_BREAKPOINT);
     const [isScrolled, setIsScrolled] = useState<boolean>(false);
     const [selectedLink, setSelectedLink] = useState<string>('#home');
     const headerRef = useRef<HTMLElement | null>(null);
     const navRef = useRef<HTMLDivElement | null>(null);
 
+    // Función para alternar el estado del menú en dispositivos móviles
     const toggleMenu = () => {
         if (isMobile) {
             setMenu(prevMenu => !prevMenu);
         }
     };
 
+    // Función para cerrar el menú y actualizar el enlace seleccionado
     const closeMenu = (link: string) => {
         if (isMobile) {
             setMenu(false);
@@ -29,19 +32,35 @@ const Header = () => {
         setSelectedLink(link);
     };
 
+    // Función para actualizar el estado del dispositivo móvil en función del tamaño de la ventana
     const handleResize = () => {
-        setIsMobile(window.innerWidth < 480);
+        setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
     };
 
+    // Hook para manejar el evento de scroll y actualizar el estado de `isScrolled` y `selectedLink`
     useEffect(() => {
         const handleScroll = () => {
             if (headerRef.current) {
                 const headerHeight = headerRef.current.offsetHeight;
-                if (window.scrollY > headerHeight) {
-                    setIsScrolled(true);
-                } else {
-                    setIsScrolled(false);
+                setIsScrolled(window.scrollY > headerHeight);
+
+                const sections = ['#home', '#about', '#projects', '#contact'];
+                let currentLink = '#home';
+
+                for (const section of sections) {
+                    const element = document.querySelector(section) as HTMLElement;
+                    if (element) {
+                        const { top: elementTop, height: elementHeight } = element.getBoundingClientRect();
+                        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+                        if (scrollPosition >= elementTop + window.scrollY && scrollPosition < elementTop + elementHeight + window.scrollY) {
+                            currentLink = section;
+                            break;
+                        }
+                    }
                 }
+
+                setSelectedLink(currentLink);
             }
         };
 
@@ -53,13 +72,12 @@ const Header = () => {
         };
     }, []);
 
+    // Hook para actualizar la posición del menú de navegación en función del tamaño de la ventana
     useEffect(() => {
         const updateNavPosition = () => {
             if (headerRef.current && navRef.current) {
                 const headerHeight = headerRef.current.offsetHeight;
-                if (navRef.current) {
-                    navRef.current.style.top = `${headerHeight}px`;
-                }
+                navRef.current.style.top = `${headerHeight}px`;
             }
         };
 
@@ -70,77 +88,54 @@ const Header = () => {
         };
     }, [menu]);
 
-    // Verificamos si la ruta es distinta de "/"
+    // Función para manejar la navegación a una sección específica
+    const handleNavigateToSection = (link: string) => {
+        // Redirige a la página de inicio si no estamos en ella
+        if (location.pathname !== '/') {
+            navigate('/', { state: { scrollTo: link } });
+        } else {
+            handleScrollToSection(link);
+        }
+        closeMenu(link);
+    };
+
+    // Función para desplazar la página hasta la sección especificada
+    const handleScrollToSection = (link: string) => {
+        const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0;
+        const element = document.querySelector(link) as HTMLElement;
+
+        if (element) {
+            const topPosition = element.getBoundingClientRect().top + window.scrollY;
+            window.scrollTo({
+                top: link === '#home' ? 0 : topPosition - headerHeight,
+                behavior: 'smooth',
+            });
+        }
+    };
+
+    // Hook para manejar la navegación y scroll al cambiar la ruta
+    useEffect(() => {
+        if (location.pathname === '/' && location.state?.scrollTo) {
+            handleScrollToSection(location.state.scrollTo);
+        } else if (location.pathname === '/') {
+            // En caso de que la ubicación sea '/', desplazar al inicio
+            handleScrollToSection('#home');
+        }
+    }, [location]);
+
+    // Verifica si estamos en la página de inicio
     const isNotHomePage = location.pathname !== '/';
 
     return (
-        <header
-            className={`${styles.header} ${isScrolled ? styles.scrolled : ''} ${styles.fixed} ${isNotHomePage ? styles.intern : ''}`}
-            ref={headerRef}
-        >
-            <h1 className={styles.header_logo}>
-                <a href="/" className={styles.header_logo_link}>
-                    <img src={maiIcon} height="60" width="58.79" alt="icono Mai" />
-                    <p className={styles.header_logo_text}>maiWeb</p>
-                </a>
-            </h1>
-
-            <button onClick={toggleMenu} className={styles.header_button}>
-                <img src={menuIcon} height="16" width="16" alt="icono menu" />
+        <header id="main-header" className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''} ${styles['header--fixed']} ${isNotHomePage ? styles['header--notHome'] : ''}`} ref={headerRef}>
+            <HeaderLogo />
+            <button onClick={toggleMenu} className={styles.header__button}>
+                <img src={menuIcon} height="16" width="16" alt="icono menú" />
             </button>
 
-            <nav className={`${styles.header_nav} ${menu && isMobile ? styles.isActive : ''}`} ref={navRef}>
-                <ul className={styles.header_mainMenu}>
-                    <li>
-                        <a
-                            className={`${styles.header_mainMenu_link} ${selectedLink === '#home' ? styles.selected : ''}`}
-                            onClick={() => closeMenu('#home')}
-                            href="/#home"
-                        >
-                            Home
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={`${styles.header_mainMenu_link} ${selectedLink === '#about' ? styles.selected : ''}`}
-                            onClick={() => closeMenu('#about')}
-                            href="/#about"
-                        >
-                            About
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={`${styles.header_mainMenu_link} ${selectedLink === '#projects' ? styles.selected : ''}`}
-                            onClick={() => closeMenu('#projects')}
-                            href="/#projects"
-                        >
-                            Projects
-                        </a>
-                    </li>
-                    <li>
-                        <a
-                            className={`${styles.header_mainMenu_link} ${selectedLink === '#contact' ? styles.selected : ''}`}
-                            onClick={() => closeMenu('#contact')}
-                            href="/#contact"
-                        >
-                            Contact
-                        </a>
-                    </li>
-                </ul>
-
-                <ul className={styles.header_rrssMenu}>
-                    <li>
-                        <a href="https://es.linkedin.com/in/maiderbarrutiaunzueta" target="_blank">
-                            <img src={linkedinIcon} height="30" width="30" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/maiderbarrutia" target="_blank">
-                            <img src={githubIcon} height="30" width="30" />
-                        </a>
-                    </li>
-                </ul>
+            <nav className={`${styles.header__nav} ${menu && isMobile ? styles['header__nav--active'] : ''}`} ref={navRef}>
+                <NavigationMenu closeMenu={closeMenu} handleNavigateToSection={handleNavigateToSection} selectedLink={selectedLink} />
+                <SocialLinks />
             </nav>
         </header>
     );

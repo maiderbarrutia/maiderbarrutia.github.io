@@ -1,93 +1,180 @@
 [
+    
     {
       "id": 1,
-      "title": "Proyecto 1",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/1.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Piatto ristorante Italiano",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/corporate-identity/piatto-restaurante/identidadPiatto.jpg",
+      "description": "",
+      "year": 2011,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "identidad-restaurante-piatto",
+      "isPrivate": false
     },
     {
       "id": 2,
-      "title": "Proyecto 2",
-      "category": "Desarrollo web frontend",
-      "image": "../../src/assets/images/2.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Revista GrafiK",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/editorial/revista-grafik/revistaGauckler.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "revista-grafik",
+      "isPrivate": false
     },
     {
       "id": 3,
-      "title": "Proyecto 3",
-      "category": "Desarrollo web frontend",
-      "image": "../../src/assets/images/3.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Folleto Cámara de comercio de Bilbao",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/advertising/brochures/camara-comercio-bilbao/camara-comercio-bilbao.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-camara-comercio-bilbao",
+      "isPrivate": false
     },
     {
       "id": 4,
-      "title": "Proyecto 4",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Folleto Colonias 2010",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/advertising/brochures/colonias/coloniasInterior.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-colonias-2010",
+      "isPrivate": false
     },
     {
       "id": 5,
-      "title": "Proyecto 5",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/1.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Folleto Exponatur",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/advertising/brochures/exponatur/expoNaturCastellano.jpg",
+      "description": "",
+      "year": 2014,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-exponatur",
+      "isPrivate": true
     },
     {
       "id": 6,
-      "title": "Proyecto 6",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Óptica Pop eye",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/corporate-identity/pop-eye/popEye-logo.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "optica-pop-eye",
+      "isPrivate": false
     },
     {
       "id": 7,
-      "title": "Proyecto 7",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Pack Zensación",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/corporate-identity/zensacion/montaje-zensacion.jpg",
+      "description": "",
+      "year": 2015,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "pack-zensacion",
+      "isPrivate": false
     },
     {
       "id": 8,
-      "title": "Proyecto 8",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Bodegas Ubide",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/corporate-identity/bodegas-ubide/papeleria-bodegas-ubide.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "bodegas-ubide",
+      "isPrivate": false
     },
     {
       "id": 9,
-      "title": "Proyecto 9",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Anuncios publicitarios",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/advertising/advertisements/advertisements.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "anuncios-publicitarios",
+      "isPrivate": false
     },
     {
       "id": 10,
-      "title": "Proyecto 10",
-      "category": "Diseño grafico",
-      "image": "../../src/assets/images/4.jpg",
-      "description": "Descripción del Proyecto 1.",
-      "year": "2023",
-      "link": "../../src/pages/projects/projectDetails.tsx"
+      "title": "Carteles Aste nagusia y Jazzaldia",
+      "category": "Diseño gráfico",
+      "image": "../../src/assets/images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "carteles-aste-nagusia-jazzaldia",
+      "isPrivate": false
+    },
+    {
+      "id": 11,
+      "title": "Landing GasNature",
+      "category": "Diseño web",
+      "image": "../../src/assets/images/web-design/gasnature-landing.jpg",
+      "description": "",
+      "year": 2017,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-gasNature",
+      "isPrivate": false
+    },
+    {
+      "id": 12,
+      "title": "Landing TCS",
+      "category": "Diseño web",
+      "image": "../../src/assets/images/web-design/tcs.jpg",
+      "description": "",
+      "year": 2017,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-tcs",
+      "isPrivate": false
+    },
+    {
+      "id": 13,
+      "title": "Landing traductor Itzulpen",
+      "category": "Diseño web",
+      "image": "../../src/assets/images/web-design/traductor-web-itzulpen.png",
+      "description": "",
+      "year": 2018,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-traductor-itzulpen",
+      "isPrivate": false
+    },
+    {
+      "id": 14,
+      "title": "Web Araex",
+      "category": "Diseño web",
+      "image": "../../src/assets/images/web-design/araex/home-araex.png",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "web-araex",
+      "isPrivate": false
+    },
+    {
+      "id": 15,
+      "title": "Floristeria Kimu Loradenda",
+      "category": "Desarrollo web",
+      "image": "../../src/assets/images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "floristeria-kimu-loradenda",
+      "isPrivate": true
+    },
+    {
+      "id": 16,
+      "title": "Vipernake",
+      "category": "Desarrollo web",
+      "image": "../../src/assets/images/web-develop/vipernake/vipernake-web.jpg",
+      "description": "",
+      "year": 2021,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "vipernake",
+      "isPrivate": true
     }
   ]
   

@@ -1,0 +1,81 @@
+@import '../../../../assets/styles/main.scss';
+
+.projects__card {
+    margin-bottom: rem(15);
+    position: relative;
+    transition: all 0.5s;
+    overflow: hidden;
+
+    &-image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &-info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.9);
+        opacity: 0;
+        text-align: center;
+        transition: all 0.5s ease;
+        z-index: 2;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: rem(20);
+    }
+    &-title {
+        font-size: rem(18);
+        margin-bottom: rem(10);
+    }
+
+    &-year {
+        font-size: rem(14);
+        margin-bottom: rem(15);
+    }
+
+    &-link {
+        background-color: #fff;
+        color: #333;
+        padding: rem(10) rem(20);
+        font-size: rem(14);
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: background-color 0.3s, color 0.3s;
+
+        &:hover {
+            background-color: #333;
+            color: #fff;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(93, 172, 109, 0.95);
+        opacity: 0;
+        transition: opacity 0.5s ease;
+        z-index: 1;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        .projects__card-info {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

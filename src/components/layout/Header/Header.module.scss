@@ -9,21 +9,7 @@
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease;
 
-    &_logo_link{
-        display: flex;
-        align-items: center;
-        gap: rem(10);
-        text-decoration: none;
-    }
-
-    &_logo_text{
-        font-size: rem(18);
-        font-weight: bold;
-        color: $main-black;
-        display: none;
-    }
-
-    &_button {
+    &__button {
         display: block;
         border: none;
         background-color: transparent;
@@ -32,7 +18,7 @@
         cursor: pointer;
     }
 
-    &_nav {
+    &__nav {
         display: none;
         opacity: 0;
         flex-direction: column;
@@ -41,7 +27,7 @@
         gap: rem(20);
     }
 
-    &_nav.isActive {
+    &__nav--active {
         display: flex;
         opacity: 1;
         flex-direction: column;
@@ -53,28 +39,9 @@
         background-color: $main-gray;
     }
     
-    &_mainMenu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: rem(20);
-    }
+    
 
-    &_mainMenu_link{
-        text-decoration: none;
-        color: $main-black;
-
-        &:hover, &.selected{
-            color: $primary-color;
-        }
-    }
-
-    &_rrssMenu{
-        display: flex;
-        gap: rem(10);
-    }
-
-    &.fixed {
+    &--fixed {
         position: fixed;
         top: 0;
         left: 0;
@@ -83,23 +50,23 @@
         transform: translateY(0);
     }
 
-    &:not(.fixed) {
+    &:not(&--fixed) {
         transform: translateY(-100%); 
     }
 
-    &.scrolled, &.inside{
+    &--scrolled, &--notHome{
         background-color: $main-gray;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: $size-mobile) {
     .header {
-        &_button {
+        &__button {
             display: none;
         }
 
-        &_nav {
+        &__nav {
             display: flex;
             opacity: 1;
             flex-direction: row; 
@@ -107,11 +74,6 @@
             gap: rem(20);
             align-items: center;
             padding: 0;
-        }
-
-        &_mainMenu {
-            flex-direction: row;
-            gap: rem(10);
         }
     }
 }

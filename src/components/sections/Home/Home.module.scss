@@ -5,10 +5,117 @@
     box-sizing: border-box;
     position: relative;
     height: 100vh;
-
-    .text{
-        background-color: blueviolet;
-        position: absolute;
-        bottom: 0;
-    }
 }
+
+.header-content {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  .header-content_info {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+  }
+  .header-content_info-text {
+    text-transform: uppercase;
+    font-size: rem(22);
+    line-height: rem(26);
+  
+    // &.typing {
+    //   overflow: hidden;
+    //   margin: 0 auto;
+  
+    //   @media (min-width: $size-mobile) {
+    //     white-space: nowrap;
+    //     animation: typing 2s steps(30, end), flicker .5s step-end infinite;
+    //     border-right: .15em solid $primary-color;
+    //   }
+    // }
+    // strong {
+    //   font-weight: 600;
+    // }
+  }
+//   .header-content__illustration {
+//     @media (max-width: $size-desktop) {
+//       display: none;
+//     }
+//   }
+//   .professional-profile {
+//     background-color: $primary-color;
+  
+//     .container {
+//       display: flex;
+//       justify-content: space-between;
+//       align-items: center;
+//       flex-wrap: wrap;
+//       padding-top: rem(30);
+//       padding-bottom: rem(30);
+//       gap: rem(20);
+//     }
+//     .occupation {
+//       font-size: rem(42);
+//       line-height: rem(46);
+  
+//       @media (min-width: $size-mobile) {
+//         font-size: rem(54);
+//         line-height: rem(60);
+//       }
+//     }
+//     .cv-button {
+//       display: inline-block;
+//       width: 100%;
+//       background-color: #333;
+//       text-align: center;
+//       transition: all 1s;
+  
+//       @media (min-width: $size-tablet) {
+//         background-color: transparent;
+//         width: auto;
+//       }
+  
+//       &:hover {
+//         background-color: #fff;
+  
+//         @media (min-width: $size-tablet) {
+//           background-color: transparent;
+//         }
+  
+//         img {
+//           filter: none;
+  
+//           @media (min-width: $size-tablet) {
+//             filter: brightness(0) invert(1);
+//             transition: all 0.6s;
+//           }
+//         }
+//       }
+//       a {
+//         padding: rem(10);
+//         display: inline-block;
+//         width: 100%;
+  
+//         @media (min-width: $size-tablet) {
+//           width: auto;
+//           padding: 0;
+//         }
+//       }
+  
+//       img {
+//         filter: brightness(0) invert(1);
+  
+//         @media (min-width: $size-tablet) {
+//           filter: none;
+//         }
+//       }
+//     }
+//   }
+//   .header-content__illustration {
+//     position: relative;
+  
+//     .mobile-ilus {
+//       position: absolute;
+//       bottom: rem(70);
+//       right: 0;
+//     }
+//   }

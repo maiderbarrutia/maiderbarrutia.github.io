@@ -30,7 +30,7 @@ const SiteRoutes: React.FC = () => {
           />
           
           {/* Ruta para las demás páginas */}
-          <Route path="/projects/:id" element={<ProjectDetail />} />
+          <Route path="/proyectos/:slug" element={<ProjectDetail />} />
           <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
