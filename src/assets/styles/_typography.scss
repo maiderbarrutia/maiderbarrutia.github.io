@@ -1,21 +1,8 @@
 // typography.scss
+@import './fonts';
 
-@import 'variables';
-
-// body {
-//   font-family: $font-stack;
-//   font-size: $font-size-base;
-// }
-
-// h1 {
-//   font-size: 2.5rem;
-//   line-height: 1.2;
-// }
-
-// h2 {
-//   font-size: 2rem;
-// }
-
-// p {
-//   margin-bottom: 1rem;
-// }
+/* Typography */
+$default-fonts: Helvetica, Arial, sans-serif;
+$primary-font: 'roboto', $default-fonts;
+$secondary-font: 'satisfy', $default-fonts;
+$code-font: 'firaCode', $default-fonts;

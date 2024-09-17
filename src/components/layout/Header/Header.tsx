@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                 const headerHeight = headerRef.current.offsetHeight;
                 setIsScrolled(window.scrollY > headerHeight);
 
-                const sections = ['#home', '#about', '#projects', '#contact'];
+                const sections = ['#home', '#about', '#projects', '#experience', '#contact'];
                 let currentLink = '#home';
 
                 for (const section of sections) {

@@ -15,12 +15,12 @@ const HeaderLogo: React.FC = () => {
     };
 
     return (
-        <h1 className={styles.header__logo}>
+        <div className={styles.header__logo}>
             <a className={styles['header__logo-link']} onClick={handleHomeNavigation} style={{ cursor: 'pointer' }}>
                 <img src={maiIcon} height="60" width="58.79" alt="icono Mai" />
                 <p className={styles['header__logo-text']}>maiWeb</p>
             </a>
-        </h1>
+        </div>
     );
 };
 

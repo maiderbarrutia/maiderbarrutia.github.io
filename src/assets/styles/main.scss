@@ -1,48 +1,38 @@
 @import './reset';
-@import './fonts';
 @import './variables';
 @import './typography';
 @import './mixins';
 @import './functions';
-
-
-$header-width: rem(600);
-$container-width: rem(1200);
-
+@import './animations';
 
 html {
     scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'roboto', sans-serif;
+  font-family: $primary-font;
   font-weight: 400;
   font-size: 16px;
 }
 
 p {
-  line-height: rem(20);
+  line-height: rem(24);
+}
+
+img{
+  width: 100%;
+  height: auto;
+}
+
+.container{
+  max-width: rem(1200);
+  margin: 0 auto;
+  padding-left: rem(20);
+  padding-right: rem(20);
 }
 
 .section__container{
-  max-width: $container-width;
+  max-width: rem(1200);
   margin: 0 auto;
   padding: rem(60) rem(20);
-}
-
-.section__header{
-  max-width: $header-width;
-  width: 100%;
-  margin: 0 auto rem(40);
-}
-
-.section__title{
-  font-size: rem(36);
-  font-family: 'satisfy', sans-serif;
-  text-align: center;
-  margin-bottom: rem(20);
-}
-
-.section__text{
-  font-weight: 300;
 }

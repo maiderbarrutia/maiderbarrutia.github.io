@@ -1,0 +1,27 @@
+@import '/src/assets/styles/main.scss';
+
+.experience{
+    background-color:$primary-color;
+    position: relative;
+    
+
+    &::before {
+        content: "";
+        border-bottom: rem(40) solid $primary-color;
+        border-left: 20vw solid $main-gray;
+        border-right: 80vw solid $main-gray;
+        position: absolute;
+        top: rem(-4);
+        right: 0;
+    }
+
+    &::after {
+        content: "";
+        border-top: rem(150) solid $primary-color;
+        border-left: 50vw solid $main-gray;
+        border-right: 50vw solid $main-gray;
+        position: absolute;
+        bottom: rem(-140);
+        right: 0;
+    }
+}

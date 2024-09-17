@@ -1,0 +1,43 @@
+{
+    "experience": [
+      [
+        {
+          "title": "Desarrolladora web frontend",
+          "date": "2017 - 2023 (6 años)",
+          "content": "<ul><li>Maquetación y mantenimiento</li><li>Creación de plantillas</li></ul>",
+          "imageUrl": "/src/assets/icons/mai-icon.png"
+        },
+        {
+          "title": "Diseño gráfico y web",
+          "date": "2016 - 2017 (1 año)",
+          "content": "<p>Maquetación y mantenimiento</p>",
+          "imageUrl": "/src/assets/icons/mai-icon.png"
+        },
+        {
+          "title": "Diseño web",
+          "date": "2016 (3 meses)",
+          "content": "<p>Maquetación y mantenimiento</p>",
+          "imageUrl": "/src/assets/icons/mai-icon.png"
+        }
+      ]
+      
+    ],
+    "education": [
+      [
+        {
+          "title": "Técnico superior de 'Desarrollo de aplicaciones web'",
+          "date": "2023 - Actualidad",
+          "content": "<p>",
+          "imageUrl": "/src/assets/icons/mai-icon.png"
+        },
+        {
+          "title": "Certificado de profesionalidad de 'Confección y publicación de páginas web'",
+          "date": "2015 (480 horas)",
+          "content": "",
+          "imageUrl": "/src/assets/icons/mai-icon.png"
+        }
+      ]
+      
+    ]
+  }
+  

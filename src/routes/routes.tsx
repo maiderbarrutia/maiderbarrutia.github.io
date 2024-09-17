@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from '../components/sections/Home/Home';
 import About from '../components/sections/About/About';
 import Projects from '../components/sections/Projects/Projects';
+import Experience from '../components/sections/Experience/Experience';
 import Contact from '../components/sections/Contact/Contact';
 import ProjectDetail from '../pages/projects/projectDetails';
 import NotFound from '../pages/notFound/NotFound';
@@ -24,6 +25,7 @@ const SiteRoutes: React.FC = () => {
                 <Home />
                 <About />
                 <Projects />
+                <Experience />
                 <Contact />
               </>
             } 

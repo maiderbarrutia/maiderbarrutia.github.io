@@ -1,13 +1,13 @@
-@import '../../../assets/styles/main.scss';
+@import '/src/assets/styles/main.scss';
 .footer{
     background-color: $main-black;
-    color: white;
+    color: $white;
     padding: rem(20) rem(15);
     text-align: center;
     line-height: rem(22);
 
     a{
-        color: white;
+        color: $white;
         text-decoration: none;
         font-weight: 400;
 

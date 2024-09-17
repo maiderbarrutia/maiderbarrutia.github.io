@@ -1,6 +1,16 @@
+@import '/src/assets/styles/main.scss';
+
 .contact{
-    background-color:aqua;
-    min-height: 100%;
-    box-sizing: border-box;
-    height: 500px;
+    background-color:$main-gray;
+    padding-top: rem(140);
+
+    &__link{
+        color: $primary-color;
+        font-weight: 400;
+        
+        &:hover{
+            color: $main-black;
+        }
+    }
+    
 }

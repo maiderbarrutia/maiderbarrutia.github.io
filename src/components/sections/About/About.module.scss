@@ -1,5 +1,7 @@
+@import '/src/assets/styles/main.scss';
 .about{
-    background-color:chocolate;
+    // background-color:$primary-color;
+    background-color: orange;
     min-height: 100%;
     box-sizing: border-box;
     height: 500px;

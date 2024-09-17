@@ -1,4 +1,4 @@
-@import '../../../assets/styles/main.scss';
+@import '/src/assets/styles/main.scss';
 
 .header {
     background-color: transparent;
@@ -32,14 +32,12 @@
         opacity: 1;
         flex-direction: column;
         position: absolute;
-        top: 60px;
+        top: rem(60);
         left: 0;
         width: 100%;
         z-index: 1;
         background-color: $main-gray;
     }
-    
-    
 
     &--fixed {
         position: fixed;

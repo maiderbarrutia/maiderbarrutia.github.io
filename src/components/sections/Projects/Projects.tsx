@@ -5,6 +5,7 @@ import projectsData from '../../../data/projectsData.json';
 import Button from '../../common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from './CategoryNav/CategoryNav';
+import SectionHeader from '../SectionHeader/SectionHeader';
 
 // Definimos el tipo para los proyectos aquí
 interface Project {
@@ -27,7 +28,7 @@ const Projects: React.FC = () => {
 
   const filterProjects = (category: string) => {
     setSelectedCategory(category);
-    setVisibleProjects(6); // Reinicia el número de proyectos visibles
+    setVisibleProjects(6);
   };
 
   const loadMoreProjects = () => {
@@ -49,14 +50,15 @@ const Projects: React.FC = () => {
   return (
     <section id="projects" className={styles.projects}>
       <div className={styles['section__container']}>
-        <header className={styles['section__header']}>
-          <h2 className={styles['section__title']}>Trabajos</h2>
-          <p className={styles['section__text']}>
-            Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos que he abarcado 
-            a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran en este sitio 
-            <a href="mailto:maiderbarrutia@hotmail.com" className={styles["projects__text-link"]}>¡contácta!</a>
-          </p>
-        </header>
+        <SectionHeader
+          title="Trabajos"
+          text={
+            <>
+              Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos que he abarcado a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran en este sitio{' '}
+              <a href="mailto:maiderbarrutia@hotmail.com" className={styles['projects__link']}>¡contácta!</a>
+            </>
+          }
+        />
 
         <CategoryNav 
           categories={categories} 

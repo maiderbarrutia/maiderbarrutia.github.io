@@ -1,4 +1,4 @@
-@import '../../../../assets/styles/main.scss';
+@import '/src/assets/styles/main.scss';
 
 .projects__card {
     margin-bottom: rem(15);
@@ -23,7 +23,7 @@
         text-align: center;
         transition: all 0.5s ease;
         z-index: 2;
-        color: #fff;
+        color: $white;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -42,7 +42,7 @@
 
     &-link {
         background-color: #fff;
-        color: #333;
+        color: $main-black;
         padding: rem(10) rem(20);
         font-size: rem(14);
         text-transform: uppercase;
@@ -50,8 +50,8 @@
         transition: background-color 0.3s, color 0.3s;
 
         &:hover {
-            background-color: #333;
-            color: #fff;
+            background-color: $main-black;
+            color: $white;
         }
     }
 
@@ -62,7 +62,7 @@
         right: 0;
         bottom: 0;
         left: 0;
-        background: rgba(93, 172, 109, 0.95);
+        background: rgba($primary-color, 0.95);
         opacity: 0;
         transition: opacity 0.5s ease;
         z-index: 1;
