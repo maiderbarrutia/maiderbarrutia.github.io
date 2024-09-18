@@ -12,7 +12,7 @@ const Home: React.FC = () => {
     const pdfUrl = '/src/assets/archives/cv-MaiderBarrutia.pdf';
 
     return (
-        <section id="home" className={styles.home}>
+        <section id="home" className={`${styles['home']} ${styles['home-section']}`}>
             <CirclesBackground />
 
             <div className={styles['header-content']}>

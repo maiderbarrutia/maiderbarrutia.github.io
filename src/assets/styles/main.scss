@@ -31,6 +31,16 @@ img{
   padding-right: rem(20);
 }
 
+section.home-section{
+  &:nth-child(odd) {
+    background-color: $main-gray;
+  }
+  &:nth-child(even) {
+    background-color: $primary-color;
+  }
+}
+
+
 .section__container{
   max-width: rem(1200);
   margin: 0 auto;

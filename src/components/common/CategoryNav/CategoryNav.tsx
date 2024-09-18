@@ -5,15 +5,17 @@ interface CategoryNavProps {
   categories: string[];
   selectedCategory: string;
   onCategoryClick: (category: string) => void;
+  className: string;
 }
 
-const CategoryNav: React.FC<CategoryNavProps> = ({ categories, selectedCategory, onCategoryClick }) => {
+const CategoryNav: React.FC<CategoryNavProps> = ({ categories, selectedCategory, onCategoryClick, className }) => {
+
   return (
-    <nav className={styles['projects__nav']}>
+    <nav className={`${styles[`${className}-nav`]} ${className}`}>
       {categories.map((category) => (
         <button
           key={category}
-          className={`${styles['projects__nav-button']} ${category === selectedCategory ? styles['projects__nav-button--active'] : ''}`}
+          className={`${styles[`${className}-button`]} ${category === selectedCategory ? styles[`${className}-button--active`] : ''}`}
           onClick={() => onCategoryClick(category)}
         >
           {category}
@@ -24,3 +26,5 @@ const CategoryNav: React.FC<CategoryNavProps> = ({ categories, selectedCategory,
 };
 
 export default CategoryNav;
+
+

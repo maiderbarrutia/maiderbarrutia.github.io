@@ -4,10 +4,9 @@ import styles from './Projects.module.scss';
 import projectsData from '../../../data/projectsData.json';
 import Button from '../../common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
-import CategoryNav from './CategoryNav/CategoryNav';
+import CategoryNav from '../../common/CategoryNav/CategoryNav';
 import SectionHeader from '../SectionHeader/SectionHeader';
 
-// Definimos el tipo para los proyectos aquí
 interface Project {
   id: number;
   title: string;
@@ -18,10 +17,17 @@ interface Project {
   slug: string;
 }
 
-const categories = ['Todo', 'Diseño gráfico', 'Diseño web', 'Desarrollo web'];
+const CATEGORY_MAP: { [key: string]: string } = {
+  'all': 'Todo',
+  'graphic-design': 'Diseño gráfico',
+  'web-design': 'Diseño web',
+  'web-development': 'Desarrollo web'
+};
+
+const CATEGORIES = Object.keys(CATEGORY_MAP); // ['Todo', 'Diseño gráfico', 'Diseño web', 'Desarrollo web']
 
 const Projects: React.FC = () => {
-  const [selectedCategory, setSelectedCategory] = useState<string>('Todo');
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [visibleProjects, setVisibleProjects] = useState<number>(6);
 
   const projects: Project[] = projectsData;
@@ -32,12 +38,12 @@ const Projects: React.FC = () => {
   };
 
   const loadMoreProjects = () => {
-    if (visibleProjects < projects.length) {
+    if (visibleProjects < filteredProjects.length) {
       setVisibleProjects(prev => prev + 6);
     }
   };
 
-  const filteredProjects = selectedCategory === 'Todo'
+  const filteredProjects = selectedCategory === 'all'
     ? projects
     : projects.filter(project => project.category === selectedCategory);
 
@@ -48,7 +54,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <section id="projects" className={styles.projects}>
+    <section id="projects" className={`${styles['projects']} ${styles['home-section']}`}>
       <div className={styles['section__container']}>
         <SectionHeader
           title="Trabajos"
@@ -61,9 +67,11 @@ const Projects: React.FC = () => {
         />
 
         <CategoryNav 
-          categories={categories} 
-          selectedCategory={selectedCategory} 
-          onCategoryClick={filterProjects} 
+          categories={CATEGORIES.map(cat => CATEGORY_MAP[cat])} 
+          selectedCategory={CATEGORY_MAP[selectedCategory]} 
+          onCategoryClick={(category) => filterProjects(Object.keys(CATEGORY_MAP).find(key => CATEGORY_MAP[key] === category) || '')} 
+          className='projectsCategory'
+
         />
 
         {filteredProjects.length === 0 ? (

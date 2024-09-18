@@ -4,7 +4,7 @@ import ExperienceTimeline from './Timeline/Timeline';
 
 const Experience: React.FC = () => {
     return (
-      <section id="experience" className={styles.experience}>
+      <section id="experience" className={`${styles['experience']} ${styles['home-section']}`}>
         
         <div className={styles['section__container']}>
           <SectionHeader

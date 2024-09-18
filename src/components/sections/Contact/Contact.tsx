@@ -1,9 +1,10 @@
 import styles from './Contact.module.scss'; 
 import SectionHeader from '../SectionHeader/SectionHeader';
+import ContactForm from './Form/Form';
 
 const Contact: React.FC = () => {
     return (
-      <section id="contact" className={styles.contact}>
+      <section id="contact" className={`${styles['contact']} ${styles['home-section']}`}>
         <div className={styles['section__container']}>
           <SectionHeader
             title="Envíame un mensaje"
@@ -14,6 +15,8 @@ const Contact: React.FC = () => {
               </>
             }
           />
+
+          <ContactForm/>
 
       </div>
         

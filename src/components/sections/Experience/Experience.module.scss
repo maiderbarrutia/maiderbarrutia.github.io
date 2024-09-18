@@ -1,9 +1,8 @@
 @import '/src/assets/styles/main.scss';
 
 .experience{
-    background-color:$primary-color;
     position: relative;
-    
+    margin-bottom: rem(140);
 
     &::before {
         content: "";
