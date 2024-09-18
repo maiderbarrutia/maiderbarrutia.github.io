@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@vercel/node": "^3.2.14",
@@ -40,5 +40,4 @@
     "vite": "^5.4.1"
   },
   "homepage": "https://maiderbarrutia.github.io/maiWeb_react"
-
 }
