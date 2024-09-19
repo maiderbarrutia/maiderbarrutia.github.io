@@ -1,5 +1,11 @@
 {
   "files": [],
+  "compilerOptions": {
+    "baseUrl": ".",   // Establece la carpeta base (el root del proyecto)
+    "paths": {
+      "@/*": ["src/*"]  // Alias @ apuntando a la carpeta src
+    }
+  },
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }

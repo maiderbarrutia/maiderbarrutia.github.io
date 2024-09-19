@@ -4,7 +4,7 @@ import HeaderLogo from './HeaderLogo/HeaderLogo';
 import NavigationMenu from './NavigationMenu/NavigationMenu';
 import SocialLinks from './SocialLinks/SocialLinks';
 import styles from './Header.module.scss';
-import menuIcon from '../../../assets/icons/menu-icon.svg';
+import menuIcon from '@/assets/icons/menu-icon.svg';
 
 const Header: React.FC = () => {
     const location = useLocation();

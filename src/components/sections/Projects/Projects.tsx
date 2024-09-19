@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Masonry from 'react-masonry-css';
 import styles from './Projects.module.scss'; 
-import projectsData from '../../../data/projectsData.json';
+import projectsData from '../../../../public/data/projectsData.json';
 import Button from '../../common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from '../../common/CategoryNav/CategoryNav';

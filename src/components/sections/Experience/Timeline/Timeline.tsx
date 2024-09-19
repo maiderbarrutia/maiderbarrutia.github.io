@@ -35,7 +35,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
   useEffect(() => {
     const loadTimelineData = async () => {
       try {
-        const response = await fetch('/src/data/experienceData.json'); // Ajusta esta ruta según tu estructura
+        const response = await fetch('/public/data/experienceData.json'); // Ajusta esta ruta según tu estructura
         if (!response.ok) {
           throw new Error('Error en la respuesta');
         }
@@ -51,6 +51,10 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
 
     loadTimelineData();
   }, [selectedCategory]);
+
+  const getImageSrc = (imagePath: string): string => {
+    return imagePath.replace(/^@/, '') || '';
+  };
 
   return (
     <div className={styles['timeline-container']}>
@@ -68,7 +72,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
             className={`${styles['timeline-item']} ${index % 2 === 0 ? styles['left'] : styles['right']}`}
           >
             <div className={styles['circle']}>
-              <img src={item.imageUrl} alt={`${item.title} image`} />
+              <img src={getImageSrc(item.imageUrl)} alt={`${item.title} image`} />
             </div>
             <div className={styles['content']}>
               <h2 dangerouslySetInnerHTML={{ __html: item.title }}></h2>
@@ -82,7 +86,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
                         <div
                           title={tool}
                           className={styles['tool-icon']}
-                          style={{ backgroundImage: `url(/src/assets/icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png)` }}
+                          style={{ backgroundImage: `url(${getImageSrc(`@/assets/icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png`)})` }}
                         />
                         {/* Descomentar si necesitas mostrar el nombre de la herramienta */}
                         {/* <div className={styles['tool-name']}>{tool}</div> */}

@@ -1,9 +1,9 @@
 import styles from './Home.module.scss'; 
 // import maiIcon from '../../../assets/icons/mai-icon.png'; 
-import Lamp from '../../../assets/icons/lamp.png'; 
-import Computer from '../../../assets/icons/computer.png'; 
-import Mobile from '../../../assets/icons/mobile.png'; 
-import cvIcon from '../../../assets/icons/cv-icon.svg'; 
+import Lamp from '@/assets/icons/lamp.png'; 
+import Computer from '@/assets/icons/computer.png'; 
+import Mobile from '@/assets/icons/mobile.png'; 
+import cvIcon from '@/assets/icons/cv-icon.svg'; 
 import CirclesBackground from './CirclesBackground/CirclesBackground';
 // import AnimatedCharacter from './AnimatedCharacter/AnimatedCharacter';
 
