@@ -12,7 +12,7 @@ import Footer from '../components/layout/Footer/Footer';
 
 const SiteRoutes: React.FC = () => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       {/* Header y Footer se mantienen en todas las rutas */}
       <Header />
       <main>

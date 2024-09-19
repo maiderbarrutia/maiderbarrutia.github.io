@@ -3,11 +3,15 @@ import react from '@vitejs/plugin-react-swc';
 import path from 'path';
 
 export default defineConfig({
-  base: 'https://maiderbarrutia.github.io/',
+  base: '/',
   plugins: [react()],
   resolve: {
     alias: {
-      '@': path.resolve(__dirname, './public'),
+      '@': path.resolve(__dirname, './src'),
+      '@assets': path.resolve(__dirname, './src/assets'),
+      '@components': path.resolve(__dirname, './src/components'),
+      '@pages': path.resolve(__dirname, './src/pages'),
+      '@data': path.resolve(__dirname, './src/data'),
     },
   },
 });

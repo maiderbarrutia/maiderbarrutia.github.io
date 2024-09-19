@@ -18,7 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",   // Establece la carpeta base (el root del proyecto)
+    "paths": {
+      "@/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@components/*": ["src/components/*"],
+      "@pages/*": ["src/pages/*"],
+      "@data/*": ["src/data/*"],
+    },
+    "outDir": "./dist",
   },
   "include": ["src"]
 }

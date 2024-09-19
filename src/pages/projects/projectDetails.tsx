@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import projectsData from '../../../public/data/projectsData.json';
+import projectsData from '@data/projectsData.json';
 import styles from './ProjectDetail.module.scss';
-import NotFoundPage from '../notFound/NotFound';
+import NotFoundPage from '@pages/notFound/NotFound';
 
 interface Project {
   id: number;

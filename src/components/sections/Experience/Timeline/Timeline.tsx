@@ -1,6 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Timeline.module.scss';
-import CategoryNav from '../../../common/CategoryNav/CategoryNav';
+import CategoryNav from '@components/common/CategoryNav/CategoryNav';
+import { getImageSrc } from '@/utils/srcUtils'; 
+
+
+// const getImageSrc = (imagePath: string): string => {
+//   return `/src/assets/${imagePath}`;
+// };
 
 // Usa nombres amigables para las categorías
 const CATEGORY_MAP: { [key: string]: string } = {
@@ -35,7 +41,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
   useEffect(() => {
     const loadTimelineData = async () => {
       try {
-        const response = await fetch('/public/data/experienceData.json'); // Ajusta esta ruta según tu estructura
+        const response = await fetch('/src/data/experienceData.json'); // Ajusta esta ruta según tu estructura
         if (!response.ok) {
           throw new Error('Error en la respuesta');
         }
@@ -51,10 +57,6 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
 
     loadTimelineData();
   }, [selectedCategory]);
-
-  const getImageSrc = (imagePath: string): string => {
-    return imagePath.replace(/^@/, '') || '';
-  };
 
   return (
     <div className={styles['timeline-container']}>
@@ -86,7 +88,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
                         <div
                           title={tool}
                           className={styles['tool-icon']}
-                          style={{ backgroundImage: `url(${getImageSrc(`@/assets/icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png`)})` }}
+                          style={{ backgroundImage: `url(${getImageSrc(`icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png`)})` }}
                         />
                         {/* Descomentar si necesitas mostrar el nombre de la herramienta */}
                         {/* <div className={styles['tool-name']}>{tool}</div> */}

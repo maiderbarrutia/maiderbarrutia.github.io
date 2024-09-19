@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from './ProjectCard.module.scss';
+import { getImageSrc } from '@/utils/srcUtils';
 
 // Definimos el tipo para los proyectos aquí
 interface Project {
@@ -17,16 +18,13 @@ interface ProjectCardProps {
   project: Project;
 }
 
-const getImageSrc = (imagePath: string): string => {
-  return imagePath.replace(/^@/, '') || '';
-};
+
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const imageSrc = getImageSrc(project.image);
   
   return (
     <article className={styles["projects__card"]}>
-      <img src={imageSrc} alt={project.title} className={styles['projects__card-image']}/>
+      <img src={getImageSrc(project.image)} alt={project.title} className={styles['projects__card-image']}/>
       <div className={styles["projects__card-info"]}>
         <h3 className={styles['projects__card-title']}>{project.title}</h3>
         <p className={styles['projects__card-year']}>{project.year}</p>
