@@ -1,0 +1,180 @@
+[
+    
+    {
+      "id": 1,
+      "title": "Piatto ristorante Italiano",
+      "category": "graphic-design",
+      "image": "images/graphic-design/corporate-identity/piatto-restaurante/identidadPiatto.jpg",
+      "description": "",
+      "year": 2011,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "identidad-restaurante-piatto",
+      "isPrivate": false
+    },
+    {
+      "id": 2,
+      "title": "Revista GrafiK",
+      "category": "graphic-design",
+      "image": "images/graphic-design/editorial/revista-grafik/revistaGauckler.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "revista-grafik",
+      "isPrivate": false
+    },
+    {
+      "id": 3,
+      "title": "Folleto Cámara de comercio de Bilbao",
+      "category": "graphic-design",
+      "image": "images/graphic-design/camara-comercio-bilbao/camara-comercio-bilbao.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-camara-comercio-bilbao",
+      "isPrivate": false
+    },
+    {
+      "id": 4,
+      "title": "Folleto Colonias 2010",
+      "category": "graphic-design",
+      "image": "images/graphic-design/colonias/coloniasInterior.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-colonias-2010",
+      "isPrivate": false
+    },
+    {
+      "id": 5,
+      "title": "Folleto Exponatur",
+      "category": "graphic-design",
+      "image": "images/graphic-design/exponatur/expoNaturCastellano.jpg",
+      "description": "",
+      "year": 2014,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "folleto-exponatur",
+      "isPrivate": true
+    },
+    {
+      "id": 6,
+      "title": "Óptica Pop eye",
+      "category": "graphic-design",
+      "image": "images/graphic-design/corporate-identity/pop-eye/popEye-logo.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "optica-pop-eye",
+      "isPrivate": false
+    },
+    {
+      "id": 7,
+      "title": "Pack Zensación",
+      "category": "graphic-design",
+      "image": "images/graphic-design/corporate-identity/zensacion/montaje-zensacion.jpg",
+      "description": "",
+      "year": 2015,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "pack-zensacion",
+      "isPrivate": false
+    },
+    {
+      "id": 8,
+      "title": "Bodegas Ubide",
+      "category": "graphic-design",
+      "image": "images/graphic-design/corporate-identity/bodegas-ubide/papeleria-bodegas-ubide.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "bodegas-ubide",
+      "isPrivate": false
+    },
+    {
+      "id": 9,
+      "title": "Anuncios publicitarios",
+      "category": "graphic-design",
+      "image": "images/graphic-design/advertising/advertisements/advertisements.jpg",
+      "description": "",
+      "year": 2012,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "anuncios-publicitarios",
+      "isPrivate": false
+    },
+    {
+      "id": 10,
+      "title": "Carteles Aste nagusia y Jazzaldia",
+      "category": "graphic-design",
+      "image": "images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "carteles-aste-nagusia-jazzaldia",
+      "isPrivate": false
+    },
+    {
+      "id": 11,
+      "title": "Landing GasNature",
+      "category": "web-design",
+      "image": "images/web-design/gasnature-landing.jpg",
+      "description": "",
+      "year": 2017,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-gasNature",
+      "isPrivate": false
+    },
+    {
+      "id": 12,
+      "title": "Landing TCS",
+      "category": "web-design",
+      "image": "images/web-design/tcs.jpg",
+      "description": "",
+      "year": 2017,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-tcs",
+      "isPrivate": false
+    },
+    {
+      "id": 13,
+      "title": "Landing traductor Itzulpen",
+      "category": "web-design",
+      "image": "images/web-design/traductor-web-itzulpen.png",
+      "description": "",
+      "year": 2018,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "landing-traductor-itzulpen",
+      "isPrivate": false
+    },
+    {
+      "id": 14,
+      "title": "Web Araex",
+      "category": "web-design",
+      "image": "images/web-design/araex/home-araex.png",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "web-araex",
+      "isPrivate": false
+    },
+    {
+      "id": 15,
+      "title": "Floristeria Kimu Loradenda",
+      "category": "web-development",
+      "image": "images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
+      "description": "",
+      "year": 2013,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "floristeria-kimu-loradenda",
+      "isPrivate": true
+    },
+    {
+      "id": 16,
+      "title": "Vipernake",
+      "category": "web-development",
+      "image": "images/web-develop/vipernake/vipernake-web.jpg",
+      "description": "",
+      "year": 2021,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "vipernake",
+      "isPrivate": true
+    }
+  ]
+  
