@@ -1,4 +1,5 @@
-@import '/src/assets/styles/main.scss';
+@import '@assets/styles/main.scss';
+
 .home{
   min-height: 100%;
   box-sizing: border-box;
@@ -52,15 +53,15 @@
       gap: rem(10);
     }
 
-    & .lamp-container{
+    .lamp-container{
       position: relative;
     }
 
-    & .lamp-illustration{
+    .lamp-illustration{
       width: rem(144);
     }
   
-    & .lamp-light {
+    .lamp-light {
       position: absolute;
       top: 21px;
       left: -445px;
@@ -81,12 +82,13 @@
       pointer-events: none;
     }
 
-    & .computer-illustration{
+    .computer-illustration{
       width: rem(260);
       position: relative;
-    right: rem(-70);
+      right: rem(-70);
     }
-    & .mobile-illustration{
+
+    .mobile-illustration{
       width: rem(65);
       position: relative;
       right: 0;
@@ -115,13 +117,14 @@
   &__occupation{
     font-size: rem(40);
     font-family: $secondary-font;
+    color: $main-black;
 
     @media (min-width: $size-mobile){
       font-size: rem(54);
     }
   }
 
-  & .cv-button{
+  .cv-button{
     width: rem(35);
   }
 }

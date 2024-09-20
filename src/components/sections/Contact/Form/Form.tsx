@@ -1,6 +1,7 @@
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import styles from './Form.module.scss';
+import Button from '@components/common/Button/Button';
 
 // Validación con Yup
 const validationSchema = Yup.object({
@@ -43,7 +44,7 @@ const MaiForm: React.FC = () => {
         throw new Error('Error en el envío del formulario');
       }
 
-      console.log('Formulario enviado exitosamente:', values);
+      console.log('Formulario enviado correctamente:', values);
     } catch (error) {
       console.error('Error al enviar el formulario:', error);
     }
@@ -55,44 +56,46 @@ const MaiForm: React.FC = () => {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {() => (
+      {({ errors, touched }) => (
         <Form className={styles['form']}>
-          <div className={styles['form-group']}>
-            <label htmlFor="name">Nombre</label>
-            <Field
-              type="text"
-              id="name"
-              name="name"
-              className={styles['form-control']}
-            />
-            <ErrorMessage name="name" component="div" className={styles['error']} />
+          <div className={styles['form-container']}>
+            <div className={styles['form-row']}>
+              <div className={styles['form-group']}>
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder=" "
+                  className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+                />
+                <label htmlFor="name" className={`${styles['form-label']} ${styles['required-input']}`}>Nombre</label>
+                <ErrorMessage name="name" component="div" className={styles['error']} />
+              </div>
+
+              <div className={styles['form-group']}>
+                <Field
+                  type="email"
+                  name="email"
+                  placeholder=" "
+                  className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+                />
+                <label htmlFor="email" className={`${styles['form-label']} ${styles['required-input']}`}>Correo Electrónico</label>
+                <ErrorMessage name="email" component="div" className={styles['error']} />
+              </div>
+            </div>
+
+            <div className={styles['form-group']}>
+              <Field
+                as="textarea"
+                name="message"
+                placeholder=" "
+                className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+              />
+              <label htmlFor="message" className={`${styles['form-label']} ${styles['required-input']}`}>Mensaje</label>
+              <ErrorMessage name="message" component="div" className={styles['error']} />
+            </div>
           </div>
 
-          <div className={styles['form-group']}>
-            <label htmlFor="email">Correo electrónico</label>
-            <Field
-              type="email"
-              id="email"
-              name="email"
-              className={styles['form-control']}
-            />
-            <ErrorMessage name="email" component="div" className={styles['error']} />
-          </div>
-
-          <div className={styles['form-group']}>
-            <label htmlFor="message">Mensaje</label>
-            <Field
-              as="textarea"
-              id="message"
-              name="message"
-              className={styles['form-control']}
-            />
-            <ErrorMessage name="message" component="div" className={styles['error']} />
-          </div>
-
-          <button type="submit" className={styles['submit-button']}>
-            Enviar
-          </button>
+          <Button type="submit" text="Enviar" className={styles['submit-button']}/>
         </Form>
       )}
     </Formik>
@@ -100,3 +103,4 @@ const MaiForm: React.FC = () => {
 };
 
 export default MaiForm;
+

@@ -1,8 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 import styles from './Projects.module.scss'; 
-import projectsData from '@data/projectsData.json';
-import Button from '../../common/Button/Button';
+import Button from '@components/common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
 import SectionHeader from '../SectionHeader/SectionHeader';
@@ -24,13 +23,30 @@ const CATEGORY_MAP: { [key: string]: string } = {
   'web-development': 'Desarrollo web'
 };
 
-const CATEGORIES = Object.keys(CATEGORY_MAP); // ['Todo', 'Diseño gráfico', 'Diseño web', 'Desarrollo web']
+const CATEGORIES = Object.keys(CATEGORY_MAP);
 
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [visibleProjects, setVisibleProjects] = useState<number>(6);
+  const [projects, setProjects] = useState<Project[]>([]); // State for projects
 
-  const projects: Project[] = projectsData;
+  // Load projects data from JSON file
+  useEffect(() => {
+    const loadProjectsData = async () => {
+      try {
+        const response = await fetch('/src/data/projectsData.json');
+        if (!response.ok) {
+          throw new Error('Error en la respuesta al cargar los proyectos');
+        }
+        const data: Project[] = await response.json();
+        setProjects(data);
+      } catch (error) {
+        console.error('Error cargando los datos de proyectos:', error);
+      }
+    };
+
+    loadProjectsData();
+  }, []);
 
   const filterProjects = (category: string) => {
     setSelectedCategory(category);
@@ -71,7 +87,6 @@ const Projects: React.FC = () => {
           selectedCategory={CATEGORY_MAP[selectedCategory]} 
           onCategoryClick={(category) => filterProjects(Object.keys(CATEGORY_MAP).find(key => CATEGORY_MAP[key] === category) || '')} 
           className='projectsCategory'
-
         />
 
         {filteredProjects.length === 0 ? (

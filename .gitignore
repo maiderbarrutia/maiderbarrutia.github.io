@@ -1,6 +1,10 @@
 # Node modules
 node_modules/
 
+# Build output
+dist/
+build/
+
 # Log files
 *.log
 npm-debug.log*
@@ -26,7 +30,6 @@ jspm_packages/
 *.sln
 *.sw?
 *.DS_Store
-*.vscode/
 *.code-workspace
 
 # Operating System files
@@ -34,25 +37,23 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
-# Mac OS files
+# Mac
 .DS_Store
 .AppleDouble
 .LSOverride
 
-# Windows files
-ehthumbs.db
+# Windows
 Icon?
-Desktop.ini
 
-# Build directories - EXCEPT for gh-pages deploy
-# Ignore the build directories during development
-# Allow them in gh-pages branch for deployment
-# Git will still track the build folder for deployment when force added
-# You can remove this comment if you like, it is here just to explain
+# Generated files
+*.pid
+*.seed
+*.sql
+*.sqlite
 
 # TypeScript
 *.tsbuildinfo
 
-# Next.js build directories
+# Next.js
 .next/
 out/

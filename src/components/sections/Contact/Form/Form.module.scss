@@ -1,38 +1,90 @@
+@import '@assets/styles/main.scss';
+
 .form {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+  max-width: $size-desktop;
+  margin: 0 auto;
+  padding: rem(20);
+
+  &-container{
+    margin-bottom: rem(60);
   }
-  
-  .form-group {
-    margin-bottom: 15px;
+
+  &-row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media (min-width: $size-tablet) {
+      flex-direction: row;
+    }
+    
+    .form-group{
+      @media (min-width: $size-tablet) {
+        width: 47%;
+      }
+    }
   }
-  
-  .form-control {
+
+  &-group {
     width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    margin-bottom: rem(15);
+    margin-top: rem(20);
+    position: relative;
+
+    input,
+    textarea {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      padding: rem(5) 0;
+      background-color: transparent;
+      outline: none;
+    }
+
+    .form-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      color: $secondary-gray;
+      transition: all 0.3s ease;
+      pointer-events: none;
+      font-weight: 500;
+    }
+
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .form-label{
+      top: rem(-20);
+      color: $main-black;
+      font-size: rem(12);
+    }
+
+    .required-input::after {
+      content: "*";
+      color: #ccc;
+      font-size: rem(18);
+      margin-left: rem(5);
+    }
+    
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .required-input::after {
+      color: red;
+    }
   }
-  
+
+  &-control {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 10px 0;
+    background-color: transparent;
+    outline: none;
+    border-radius: 0;
+  }
+
   .error {
     color: red;
     margin-top: 5px;
+    font-size: 12px;
   }
-  
-  .submit-button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .submit-button:hover {
-    background-color: #0056b3;
-  }
-  
+}
+
+

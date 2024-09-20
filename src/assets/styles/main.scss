@@ -25,7 +25,7 @@ img{
 }
 
 .container{
-  max-width: rem(1200);
+  max-width: $size-large;
   margin: 0 auto;
   padding-left: rem(20);
   padding-right: rem(20);

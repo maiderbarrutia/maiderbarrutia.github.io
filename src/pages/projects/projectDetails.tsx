@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import projectsData from '@data/projectsData.json';
 import styles from './ProjectDetail.module.scss';
 import NotFoundPage from '@pages/notFound/NotFound';
+import { getAssetSrc } from '@/utils/srcUtils';
 
 interface Project {
   id: number;
@@ -50,7 +51,7 @@ const ProjectDetail: React.FC = () => {
 
   return (
     <div className={styles.projectDetail} style={{ paddingTop: `${headerHeight}px` }}>
-      <img src={project.image} alt={project.title} />
+      <img src={getAssetSrc(project.image)} alt={project.title} />
       <h1>{project.title}</h1>
       <p>{project.description}</p>
     </div>
