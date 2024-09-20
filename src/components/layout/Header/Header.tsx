@@ -32,6 +32,7 @@ const Header: React.FC = () => {
         setSelectedLink(link);
     };
 
+
     // Función para actualizar el estado del dispositivo móvil en función del tamaño de la ventana
     const handleResize = () => {
         setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
@@ -77,14 +78,24 @@ const Header: React.FC = () => {
         const updateNavPosition = () => {
             if (headerRef.current && navRef.current) {
                 const headerHeight = headerRef.current.offsetHeight;
-                navRef.current.style.top = `${headerHeight}px`;
+                // navRef.current.style.paddingTop = `${headerHeight}px`;
+                if (window.innerWidth < MOBILE_BREAKPOINT) {
+                    navRef.current.style.paddingTop = `${headerHeight}px`;
+                    navRef.current.style.top = '0';
+                } else {
+                    navRef.current.style.paddingTop = '0'; // Remueve el padding si es mayor a 992px
+                }
             }
+        };
+        const handleResizeWithNavUpdate = () => {
+            handleResize();  // Actualiza el estado de 'isMobile'
+            updateNavPosition(); // Actualiza la posición del menú de navegación
         };
 
         updateNavPosition();
-        window.addEventListener('resize', handleResize);
+        window.addEventListener('resize', handleResizeWithNavUpdate);
         return () => {
-            window.removeEventListener('resize', handleResize);
+            window.removeEventListener('resize', handleResizeWithNavUpdate);
         };
     }, [menu]);
 
@@ -128,15 +139,21 @@ const Header: React.FC = () => {
 
     return (
         <header id="main-header" className={`${styles.header} ${isScrolled ? styles['header--scrolled'] : ''} ${styles['header--fixed']} ${isNotHomePage ? styles['header--notHome'] : ''}`} ref={headerRef}>
-            <HeaderLogo />
-            <button onClick={toggleMenu} className={styles.header__button}>
-                <img src={menuIcon} height="16" width="16" alt="icono menú" />
-            </button>
+            <div className={styles.header__container}>
+            <HeaderLogo closeMenu={closeMenu}/>
 
-            <nav className={`${styles.header__nav} ${menu && isMobile ? styles['header__nav--active'] : ''}`} ref={navRef}>
-                <NavigationMenu closeMenu={closeMenu} handleNavigateToSection={handleNavigateToSection} selectedLink={selectedLink} />
+            <div className={styles.header__menu}>
+                <button onClick={toggleMenu} className={styles.header__button}>
+                    <img src={menuIcon} height="16" width="16" alt="icono menú" />
+                </button>
+
+                <nav className={`${styles.header__nav} ${menu && isMobile ? styles['header__nav--active'] : ''}`} ref={navRef}>
+                    <NavigationMenu closeMenu={closeMenu} handleNavigateToSection={handleNavigateToSection} selectedLink={selectedLink} />
+                    
+                </nav>
                 <SocialLinks />
-            </nav>
+            </div>
+            </div>
         </header>
     );
 };

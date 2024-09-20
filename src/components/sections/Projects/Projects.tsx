@@ -34,7 +34,7 @@ const Projects: React.FC = () => {
   useEffect(() => {
     const loadProjectsData = async () => {
       try {
-        const response = await fetch('/src/data/projectsData.json');
+        const response = await fetch('/data/projectsData.json');
         if (!response.ok) {
           throw new Error('Error en la respuesta al cargar los proyectos');
         }

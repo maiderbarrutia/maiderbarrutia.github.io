@@ -11,7 +11,7 @@ export default defineConfig({
       '@assets': path.resolve(__dirname, './src/assets'),
       '@components': path.resolve(__dirname, './src/components'),
       '@pages': path.resolve(__dirname, './src/pages'),
-      '@data': path.resolve(__dirname, './src/data'),
+      '@data': path.resolve(__dirname, './public/data'),
     },
   },
 });

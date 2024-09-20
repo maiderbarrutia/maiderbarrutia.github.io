@@ -2,7 +2,11 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './HeaderLogo.module.scss';
 import maiIcon from '@/assets/icons/mai-icon.svg';
 
-const HeaderLogo: React.FC = () => {
+interface LogoProps {
+    closeMenu: (link: string) => void;
+}
+
+const HeaderLogo: React.FC<LogoProps> = ({ closeMenu}) => {
     const navigate = useNavigate();
     const location = useLocation();
 
@@ -14,9 +18,14 @@ const HeaderLogo: React.FC = () => {
         }
     };
 
+    const handleClick = (link: string) => {
+        handleHomeNavigation();
+        closeMenu(link);
+    };
+
     return (
         <div className={styles.header__logo}>
-            <a className={styles['header__logo-link']} onClick={handleHomeNavigation} style={{ cursor: 'pointer' }}>
+            <a className={styles['header__logo-link']} onClick={() => handleClick('/')} style={{ cursor: 'pointer' }}>
                 <img src={maiIcon} height="60" width="58.79" alt="icono Mai" />
                 <p className={styles['header__logo-text']}>maiWeb</p>
             </a>

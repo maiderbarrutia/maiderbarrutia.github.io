@@ -2,12 +2,26 @@
 
 .header {
     background-color: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: rem(15);
+    
+    padding: rem(15) 0;
     box-sizing: border-box;
     transition: transform 0.3s ease, background-color 0.3s ease;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: $size-large;
+        margin: 0 auto;
+        padding-left: rem(20);
+        padding-right: rem(20);
+    }
+
+    &__menu{
+        display: flex;
+        gap: rem(20);
+        z-index: 10;
+    }
 
     &__button {
         display: block;
@@ -16,6 +30,7 @@
         padding: 0;
         margin: 0;
         cursor: pointer;
+        z-index: 11;
     }
 
     &__nav {
@@ -37,6 +52,7 @@
         width: 100%;
         z-index: 1;
         background-color: $main-gray;
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
     }
 
     &--fixed {

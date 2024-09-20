@@ -39,6 +39,12 @@ h1 {
   padding: 10px 20px;
   box-sizing: border-box;
 
+  view-timeline-name: --item;
+  view-timeline-axis: block;
+  animation-timeline: --item;
+  animation-name: show;
+  animation-range: entry 25% cover 50%;
+
   @media (min-width: $size-tablet){
     width: 50%;
   }

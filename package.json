@@ -11,13 +11,14 @@
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
-    "@vercel/node": "^3.2.14",
+    "@vercel/node": "^2.10.3",
     "formik": "^2.4.6",
     "nodemailer": "^6.9.15",
     "react-dom": "^18.3.1",
     "react-masonry-css": "^1.0.16",
     "react-router-dom": "^6.26.1",
     "sass": "^1.78.0",
+    "swiper": "^11.1.14",
     "yup": "^1.4.0"
   },
   "devDependencies": {

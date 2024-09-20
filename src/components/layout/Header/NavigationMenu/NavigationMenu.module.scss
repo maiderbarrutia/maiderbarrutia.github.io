@@ -5,12 +5,16 @@
     flex-direction: column;
     justify-content: center;
     gap: rem(20);
+    align-items: center;
 
 
     &-link{
         text-decoration: none;
         color: $main-black;
         cursor: pointer;
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: rem(15);
 
         &:hover, &--selected{
             color: $primary-color;

@@ -1,0 +1,11 @@
+{
+  "builds": [
+    {
+      "src": "api/sendMail.ts",
+      "use": "@vercel/node"
+    }
+  ],
+  "scripts": {
+    "build": "vite build"
+  }
+}

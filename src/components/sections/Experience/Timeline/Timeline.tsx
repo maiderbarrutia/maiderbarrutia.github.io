@@ -35,7 +35,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
   useEffect(() => {
     const loadTimelineData = async () => {
       try {
-        const response = await fetch('/src/data/experienceData.json');
+        const response = await fetch('/data/experienceData.json');
         if (!response.ok) {
           throw new Error('Error en la respuesta');
         }

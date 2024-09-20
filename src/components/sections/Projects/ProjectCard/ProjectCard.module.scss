@@ -6,6 +6,12 @@
     transition: all 0.5s;
     overflow: hidden;
 
+    view-timeline-name: --item;
+    view-timeline-axis: block;
+    animation-timeline: --item;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+
     &-image {
         width: 100%;
         height: auto;

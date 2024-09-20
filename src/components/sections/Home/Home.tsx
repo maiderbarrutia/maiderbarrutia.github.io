@@ -6,10 +6,9 @@ import Mobile from '@assets/icons/mobile.png';
 import cvIcon from '@assets/icons/cv-icon.svg'; 
 import CirclesBackground from './CirclesBackground/CirclesBackground';
 // import AnimatedCharacter from './AnimatedCharacter/AnimatedCharacter';
+import pdfUrl from '@assets/archives/cv-MaiderBarrutia.pdf'; 
 
 const Home: React.FC = () => {
-
-    const pdfUrl = '/src/assets/archives/cv-MaiderBarrutia.pdf';
 
     return (
         <section id="home" className={`${styles['home']} ${styles['home-section']}`}>
