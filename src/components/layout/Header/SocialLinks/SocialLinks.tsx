@@ -1,3 +1,4 @@
+import React from 'react';
 import styles from './SocialLinks.module.scss';
 import githubIcon from '@/assets/icons/github-icon.svg';
 import linkedinIcon from '@/assets/icons/linkedin-icon.svg';

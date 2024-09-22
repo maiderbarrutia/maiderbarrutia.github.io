@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import styles from './HeaderLogo.module.scss';
 import maiIcon from '@/assets/icons/mai-icon.svg';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import HeaderLogo from './HeaderLogo/HeaderLogo';
@@ -147,6 +148,7 @@ const Header: React.FC = () => {
                     <img src={menuIcon} height="16" width="16" alt="icono menú" />
                 </button>
 
+                
                 <nav className={`${styles.header__nav} ${menu && isMobile ? styles['header__nav--active'] : ''}`} ref={navRef}>
                     <NavigationMenu closeMenu={closeMenu} handleNavigateToSection={handleNavigateToSection} selectedLink={selectedLink} />
                     

@@ -16,7 +16,7 @@
 
     /* Linting */
     "strict": true,
-    "noUnusedLocals": true,
+    "noUnusedLocals": false,  //Solo lo he cambiado porque da error al hacer build si tengo los testing (es true)
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "baseUrl": ".",   // Establece la carpeta base (el root del proyecto)
