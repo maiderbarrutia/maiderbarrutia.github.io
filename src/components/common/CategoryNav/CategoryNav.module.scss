@@ -36,8 +36,6 @@
 
 .experienceCategory{
 
-    
-
     &-nav{
         display: flex;
         justify-content: center;
@@ -47,14 +45,17 @@
         position: relative;
 
         &::before{
-            content: "";
-            border-top: 2px dashed $main-gray;
-            width: 100%;
-            height: rem(5);
-            position: absolute;
-            top: 50%;
-            left: 0;
-            z-index: 4;
+
+            @media (min-width: $size-mobile){
+                content: "";
+                border-top: 2px dashed $main-gray;
+                width: 100%;
+                height: rem(5);
+                position: absolute;
+                top: 50%;
+                left: 0;
+                z-index: 4;
+            }
         }
     }
 

@@ -9,11 +9,16 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 // Lista de herramientas (simuladas)
+// const tools = [
+//   'Angular', 'Asana', 'Bootstrap', 'CSS3', 'Figma', 'Git', 
+//   'Gulp', 'HTML5', 'Illustrator', 'Indesign', 'Javascript ES6', 
+//   'Photoshop', 'React', 'SASS', 'SEO', 'Trello', 'Typescript', 
+//   'Wordpress', 'XD', 'jest'
+// ];
 const tools = [
-  'Angular', 'Asana', 'Bootstrap', 'CSS3', 'Figma', 'Git', 
-  'Gulp', 'HTML5', 'Illustrator', 'Indesign', 'Javascript ES6', 
+  'Angular', 'Asana', 'Bootstrap', 'CSS3', 'Figma', 'Git', 'HTML5', 'Javascript ES6', 
   'Photoshop', 'React', 'SASS', 'SEO', 'Trello', 'Typescript', 
-  'Wordpress', 'XD'
+  'Wordpress', 'jest'
 ];
 
 const ToolsCarousel = () => {
@@ -23,7 +28,7 @@ const ToolsCarousel = () => {
     <div className={styles['swiper-container']} style={{ width: '100%', margin: '0 auto' }}>
       <Swiper
         modules={[Navigation]}
-        spaceBetween={20}
+        spaceBetween={10}
         slidesPerView={8}
         navigation
         pagination={{ clickable: true }}

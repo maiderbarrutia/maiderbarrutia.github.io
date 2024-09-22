@@ -1,17 +1,15 @@
 @import '@assets/styles/main.scss';
 
-
-
 .timeline-container {
   margin: 0 auto;
-  padding: 20px;
-  max-width: 1200px;
+  padding: rem(20);
+  max-width: $size-large;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 2rem;
+  margin-bottom: rem(20);
+  font-size: rem(32);
   color: $main-black;
 }
 
@@ -26,111 +24,100 @@ h1 {
     border-left: 2px dashed $main-gray;
     left: 50%;
     top: 0;
-    padding-left: 40px;
-    width: 20px;
+    padding-left: rem(40);
+    width: rem(20);
     height: 100%;
+    z-index: 29;
+  }
+
+  &-item{
+    position: relative;
+    text-align: center;
+    padding: rem(10) rem(20);
+    box-sizing: border-box;
+
+    view-timeline-name: --item;
+    view-timeline-axis: block;
+    animation-timeline: --item;
+    animation-name: show;
+    animation-range: entry 25% cover 50%;
+
+    @media (min-width: $size-tablet){
+      width: 50%;
+    }
+
+    .circle{
+      width: rem(60);
+      height: rem(60);
+      border-radius: 50%;
+      border: 2px solid #5DAC6D;
+      background: #fff;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      top: rem(30);
+      z-index:31;
+    }
   }
 }
 
 /* Elementos del timeline */
 .timeline-item {
-  position: relative;
-  width: 100%; /* Diseño de una columna por defecto */
-  padding: 10px 20px;
-  box-sizing: border-box;
-
-  view-timeline-name: --item;
-  view-timeline-axis: block;
-  animation-timeline: --item;
-  animation-name: show;
-  animation-range: entry 25% cover 50%;
-
-  @media (min-width: $size-tablet){
-    width: 50%;
-  }
 
   &.left {
-    left: 0;
-    text-align: right;
-    padding-right: 60px;
 
     @media (min-width: $size-tablet){
       left: 0; /* Elementos alineados a la izquierda */
       text-align: right;
-      padding-right: 60px;
+      padding-right: rem(60);
     }
 
     &:before {
-      content: '';
-      position: absolute;
-      right: 40px;
-      top: 35px;
-      border: 10px solid transparent;
-      border-left-color: $main-gray;
+
+      @media (min-width: $size-tablet){
+        content: '';
+        position: absolute;
+        right: rem(40);
+        top: rem(50);
+        border: 10px solid transparent;
+        border-left-color: $main-gray;
+      }
     }
 
     .circle {
-      position: absolute;
-      right: -35px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid #5DAC6D;
-      background: #fff;
 
       @media (min-width: $size-tablet){
         position: absolute;
-        right: -35px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        right: rem(-63);
+        left: auto;
       }
     }
   }
 
   &.right {
-    left: 0;
-    text-align: left;
-    padding-left: 60px;
 
     @media (min-width: $size-tablet){
       left: 50%;
       text-align: left;
-      padding-left: 60px;
+      padding-left: rem(60);
     }
 
     &:before {
-      content: '';
-      position: absolute;
-      left: 40px;
-      top: 35px;
-      border: 10px solid transparent;
-      border-right-color: $main-gray;
+      @media (min-width: $size-tablet){
+        content: '';
+        position: absolute;
+        left: rem(40);
+        top: rem(50);
+        border: 10px solid transparent;
+        border-right-color: $main-gray;
+      }
     }
 
     .circle {
-      position: absolute;
-      left: -30px;
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      overflow: hidden;
-      border: 2px solid #5DAC6D;
-      background: #fff;
 
       @media (min-width: $size-tablet){
         position: absolute;
-        left: -30px;
-      }
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+        left: 0;
       }
     }
   }
@@ -140,17 +127,19 @@ h1 {
 .content {
   background: $main-gray;
   border: 1px solid $main-gray;
-  padding: rem(20);
+  padding: rem(40) rem(20) rem(20);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: inline-block;
   text-align: left;
-  width: rem(300);
+  max-width: rem(300);
+  position: relative;
+  z-index: 30;
+  width: auto;
 
-  h2 {
+  &__title {
     margin-top: 0;
     font-size: rem(26);
     line-height: rem(28);
-    // font-family: $secondary-font;
     color: $main-black;
     margin-bottom: rem(10);
     font-weight: 300;
@@ -160,16 +149,16 @@ h1 {
     }
   }
 
-  h3 {
-    margin: 5px 0;
+  &__date {
+    margin: rem(5) 0;
     font-size: rem(16);
     background: $main-black;
     display: inline-block;
-    color: white;
-    padding: 10px 20px;
+    color: $white;
+    padding: rem(10) rem(20);
   }
 
-  .text{
+  &__text{
     ul{
       padding: rem(20) 0 rem(20) rem(20);
 
@@ -181,9 +170,7 @@ h1 {
   }
 
   p {
-    margin: 10px 0;
-    font-size: 1rem;
-    line-height: 1.5;
+    margin: rem(10) 0;
   }
 
   .tools-list{

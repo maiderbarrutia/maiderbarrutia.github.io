@@ -71,9 +71,9 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
               <img src={getAssetSrc(item.imageUrl)} alt={`${item.title} image`} />
             </div>
             <div className={styles['content']}>
-              <h2 dangerouslySetInnerHTML={{ __html: item.title }}></h2>
-              <h3>{item.date}</h3>
-              <div className={styles['text']} dangerouslySetInnerHTML={{ __html: item.content }} />
+              <h2 className={styles['content__title']} dangerouslySetInnerHTML={{ __html: item.title }}></h2>
+              <h3 className={styles['content__date']}>{item.date}</h3>
+              <div className={styles['content__text']} dangerouslySetInnerHTML={{ __html: item.content }} />
               
               <ul className={styles['tools-list']}>
                 {Array.isArray(item.tools) && item.tools.length > 0 && (
@@ -101,4 +101,3 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
 };
 
 export default Timeline;
-

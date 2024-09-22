@@ -3,6 +3,7 @@
 .skills{
     .skills-list{
         display: flex;
+        flex-wrap: wrap;
         justify-content: center;
         gap: rem(20);
 
