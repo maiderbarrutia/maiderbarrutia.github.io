@@ -125,6 +125,34 @@
   }
 
   .cv-button{
-    width: rem(35);
+    width: 100%;
+
+    @media (min-width: $size-tablet){
+      width: auto;
+    }
+
+    &__link{
+      width: 100%;
+      display: inline-block;
+      background: $main-black;
+      text-align: center;
+      padding: rem(10) 0;
+
+      @media (min-width: $size-tablet){
+        width: auto;
+        background-color: transparent;
+        padding: auto;
+      }
+      
+    }
+
+    &__img{
+      width: rem(35);
+      background-color: $white;
+
+      @media (min-width: $size-tablet){
+        background-color: transparent;
+      }
+    }
   }
 }

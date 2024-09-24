@@ -7,7 +7,7 @@ module.exports = {
     },
     moduleNameMapper: {
       '\\.(css|less|scss|sass)$': 'identity-obj-proxy', // Mapea estilos para que los tests no fallen
-      '\\.(jpg|jpeg|png|svg)$': '<rootDir>/src/__mocks__/fileMock.ts', // Mock para archivos de imagen
+      '\\.(jpg|jpeg|png|svg|gif|ttf|eot)$': '<rootDir>/src/__mocks__/fileMock.ts', // Mock para archivos de imagen y fuentes
     },
     setupFilesAfterEnv: ['<rootDir>/src/setupTests.ts'],
   };

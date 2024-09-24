@@ -1,5 +1,5 @@
 import styles from './Experience.module.scss'; 
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 import ExperienceTimeline from './Timeline/Timeline';
 
 const Experience: React.FC = () => {
@@ -8,7 +8,7 @@ const Experience: React.FC = () => {
         
         <div className={styles['section__container']}>
           <SectionHeader
-            title="Experience"
+            title="Trayectoria profesional"
           />
           <ExperienceTimeline category="experience"/>
         </div>

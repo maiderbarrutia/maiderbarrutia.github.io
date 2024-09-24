@@ -17,14 +17,12 @@ const Home: React.FC = () => {
             <div className={styles['header-content']}>
                 <div className={`${styles['container']} ${styles['header-content__info']}`}>
                     <div className={`${styles['header-content__info-intro']}`}>
-                        {/* <img src={maiIcon} alt="Mai icon" height="120" width="122.38" className={styles['header-content__info-img']} /> */}
                         {/* <AnimatedCharacter/> */}
                         <p className={`${styles['header-content__info-text']} ${styles['typing']}`}>
                             Hola! Mi nombre es <strong>Maider Barrutia</strong>
                         </p>
                     </div>
                     <div className={styles['header-content__illustration']}>
-                        {/* <img className={styles['lamp-illustration']} src={Lamp} alt="Lamp illustration" width="20" /> */}
                         <div className={styles['lamp-container']}>
                             <img src={Lamp} alt="Lamp illustration" className={styles['lamp-illustration']} />
                             <div className={styles['lamp-light']}></div>
@@ -40,7 +38,7 @@ const Home: React.FC = () => {
                     <div className={`${styles['container']} ${styles['professional-profile__container']}`}>
                         <h1 className={styles['professional-profile__occupation']}>Desarrolladora web frontend</h1>
                         <div className={styles['cv-button']}>
-                            <a href={pdfUrl} download="cv-MaiderBarrutia.pdf"><img src={cvIcon} title='Descargar Curriculum' alt="Curriculum" height="35" width="35" /></a>
+                            <a className={styles['cv-button__link']} href={pdfUrl} download="cv-MaiderBarrutia.pdf"><img className={styles['cv-button__img']} src={cvIcon} title='Descargar Curriculum' alt="Curriculum" height="35" width="35" /></a>
                         </div>
                     </div>
                 </div>

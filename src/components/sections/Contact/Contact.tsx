@@ -1,5 +1,5 @@
 import styles from './Contact.module.scss'; 
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 import ContactForm from './Form/Form';
 
 const Contact: React.FC = () => {

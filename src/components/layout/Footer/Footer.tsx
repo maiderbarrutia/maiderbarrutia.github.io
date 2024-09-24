@@ -5,7 +5,8 @@ const Footer: React.FC = () => {
   
     return (
       <footer className={styles.footer}>
-        <p>© {currentYear} | Diseñado y codificado por Maider Barrutia | <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
+        <p>© {currentYear} | Diseñado y codificado por Maider Barrutia | 
+          <a href="/politica-de-privacidad">POLÍTICA DE PRIVACIDAD</a></p>
       </footer>
     )
 }

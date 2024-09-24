@@ -1,12 +1,12 @@
 import styles from './About.module.scss'; 
 import Slider from './Slider/Slider'; 
 import Skills from './Skills/Skills'; 
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 
 const About: React.FC = () => {
   return (
     <section id="about" className={`${styles['about']} ${styles['home-section']}`}>
-      <div className={styles['container']}>
+      <div className={`${styles['container']} ${styles['about__container']}`}>
         <div className={styles['about__intro']}>
         <SectionHeader
             title="Sobre mi"

@@ -4,13 +4,13 @@ import styles from './Projects.module.scss';
 import Button from '@components/common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
-import SectionHeader from '../SectionHeader/SectionHeader';
+import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 
 interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
+  mainImage: string;
   year: number;
   link: string;
   slug: string;
@@ -23,6 +23,12 @@ const CATEGORY_MAP: { [key: string]: string } = {
   'web-development': 'Desarrollo web'
 };
 
+const SPANISH_CATEGORY_MAP: { [key: string]: string } = {
+  'Diseño gráfico': 'graphic-design', // Mapeo directo para la comparación
+  'Diseño web': 'web-design',
+  'Desarrollo web': 'web-development'
+};
+
 const CATEGORIES = Object.keys(CATEGORY_MAP);
 
 const Projects: React.FC = () => {
@@ -30,7 +36,6 @@ const Projects: React.FC = () => {
   const [visibleProjects, setVisibleProjects] = useState<number>(6);
   const [projects, setProjects] = useState<Project[]>([]); // State for projects
 
-  // Load projects data from JSON file
   useEffect(() => {
     const loadProjectsData = async () => {
       try {
@@ -60,8 +65,11 @@ const Projects: React.FC = () => {
   };
 
   const filteredProjects = selectedCategory === 'all'
-    ? projects
-    : projects.filter(project => project.category === selectedCategory);
+  ? projects
+  : projects.filter(project => 
+      project.category === selectedCategory || 
+      project.category === SPANISH_CATEGORY_MAP[selectedCategory]
+    );
 
   const breakpointColumnsObj = {
     default: 3,

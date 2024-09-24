@@ -4,17 +4,9 @@ import { getAssetSrc } from '@/utils/srcUtils';
 import { Navigation } from 'swiper/modules'; 
 import styles from './Slider.module.scss'; 
 
-// Importar los estilos de Swiper
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-// Lista de herramientas (simuladas)
-// const tools = [
-//   'Angular', 'Asana', 'Bootstrap', 'CSS3', 'Figma', 'Git', 
-//   'Gulp', 'HTML5', 'Illustrator', 'Indesign', 'Javascript ES6', 
-//   'Photoshop', 'React', 'SASS', 'SEO', 'Trello', 'Typescript', 
-//   'Wordpress', 'XD', 'jest'
-// ];
 const tools = [
   'Angular', 'Asana', 'Bootstrap', 'CSS3', 'Figma', 'Git', 'HTML5', 'Javascript ES6', 
   'Photoshop', 'React', 'SASS', 'SEO', 'Trello', 'Typescript', 
@@ -25,7 +17,7 @@ const ToolsCarousel = () => {
   const [hoveredTool, setHoveredTool] = useState<string | null>(null);
 
   return (
-    <div className={styles['swiper-container']} style={{ width: '100%', margin: '0 auto' }}>
+    <div className={styles['swiper__container']}>
       <Swiper
         modules={[Navigation]}
         spaceBetween={10}
@@ -47,24 +39,16 @@ const ToolsCarousel = () => {
 
           return (
             <SwiperSlide key={tool} style={{ display: 'flex', justifyContent: 'center' }}>
-              <li className={styles['tool']} style={{ listStyle: 'none' }}>
+              <li className={styles['tool']}>
                 <div
                   title={tool}
-                  className={styles['tool-icon']}
+                  className={styles['tool__icon']}
                   onMouseEnter={() => setHoveredTool(tool)}
                   onMouseLeave={() => setHoveredTool(null)}
                   style={{
-                    backgroundImage: `url(${backgroundImage})`,
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    width: '80px',
-                    height: '80px',
-                    transition: 'background-image 0.3s ease'
+                    backgroundImage: `url(${backgroundImage})`
                   }}
                 />
-                {/* Descomentar si necesitas mostrar el nombre de la herramienta */ }
-                {/* <div className="tool-name">{tool}</div> */ }
               </li>
             </SwiperSlide>
           );

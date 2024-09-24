@@ -7,7 +7,11 @@ interface NavigationMenuProps {
     selectedLink: string;
 }
 
-const NavigationMenu: React.FC<NavigationMenuProps> = ({ closeMenu, handleNavigateToSection, selectedLink }) => {
+const NavigationMenu: React.FC<NavigationMenuProps> = ({ 
+    closeMenu, 
+    handleNavigateToSection, 
+    selectedLink 
+}) => {
     const handleClick = (link: string) => {
         handleNavigateToSection(link);
         closeMenu(link);

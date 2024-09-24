@@ -10,7 +10,9 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
 
   // Configura tu servicio de correo aquí
   const transporter = nodemailer.createTransport({
-    service: 'Gmail',
+    host: 'smtp.office365.com', // Host de Hotmail/Outlook
+    port: 587, // Puerto para el envío
+    secure: false, // true para puerto 465, false para otros
     auth: {
       user: process.env.EMAIL_USER,
       pass: process.env.EMAIL_PASS,

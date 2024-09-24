@@ -1,15 +1,15 @@
 @import '@assets/styles/main.scss';
 
-.form {
+.contact-form {
   max-width: $size-desktop;
   margin: 0 auto;
   padding: rem(20);
 
-  &-container{
+  &__container{
     margin-bottom: rem(60);
   }
 
-  &-row {
+  &__row {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -19,14 +19,14 @@
       flex-direction: row;
     }
     
-    .form-group{
+    .contact-form__group{
       @media (min-width: $size-tablet) {
         width: 47%;
       }
     }
   }
 
-  &-group {
+  &__group {
     width: 100%;
     margin-bottom: rem(15);
     margin-top: rem(20);
@@ -42,35 +42,35 @@
       outline: none;
     }
 
-    .form-label {
-      position: absolute;
-      top: 0;
-      left: 0;
-      color: $secondary-gray;
-      transition: all 0.3s ease;
-      pointer-events: none;
-      font-weight: 500;
-    }
-
-    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .form-label{
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .contact-form__label{
       top: rem(-20);
       color: $main-black;
       font-size: rem(12);
     }
 
-    .required-input::after {
+    .contact-form__label--required::after {
       content: "*";
       color: #ccc;
       font-size: rem(18);
       margin-left: rem(5);
     }
     
-    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .required-input::after {
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .contact-form__label--required::after {
       color: red;
     }
   }
 
-  &-control {
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: $secondary-gray;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    font-weight: 500;
+  }
+
+  &__control {
     width: 100%;
     border: none;
     border-bottom: 2px solid #ccc;
@@ -80,7 +80,7 @@
     border-radius: 0;
   }
 
-  .error {
+  &__error {
     color: red;
     margin-top: 5px;
     font-size: 12px;

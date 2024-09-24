@@ -18,4 +18,11 @@ export default defineConfig({
       '@data': path.resolve(__dirname, './public/data'),
     },
   },
+  define: {
+    'process.env': {
+      EMAIL_USER: JSON.stringify(process.env.EMAIL_USER),
+      EMAIL_PASS: JSON.stringify(process.env.EMAIL_PASS),
+      RECIPIENT_EMAIL: JSON.stringify(process.env.RECIPIENT_EMAIL),
+    },
+  },
 });

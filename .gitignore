@@ -57,3 +57,4 @@ Icon?
 # Next.js
 .next/
 out/
+.vercel

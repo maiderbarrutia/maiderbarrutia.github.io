@@ -2,7 +2,7 @@
 
 .button {
     display: block;
-    margin: rem(20) auto;
+    margin: auto auto rem(20);
     border: none;
     padding: rem(10) rem(30);
     font-size: rem(14);
@@ -15,7 +15,7 @@
       padding: rem(15) rem(40);
     }
 
-    &--green {
+    &--primaryColor {
       background-color: $primary-color;
       color: $main-black;
 

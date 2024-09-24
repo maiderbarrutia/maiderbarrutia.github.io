@@ -4,8 +4,8 @@
         {
           "title": "<strong>Desarrolladora web frontend</strong>",
           "date": "2017 - 2023 (6 años)",
-          "company": "Corus Consulting",
-          "content": "<ul><li>Maquetación y mantenimiento</li><li>Creación de plantillas</li></ul>",
+          "company": "<strong>Corus Consulting</strong> | Madrid",
+          "content": "<ul><li>Maquetación y mantenimiento de sitios web (<strong>CSS3</strong>, <strong>HTML5</strong>, <strong>Bootstrap</strong>, <strong>Sass</strong>, <strong>JavaScript ES6</strong>, <strong>jQuery</strong>, <strong>Git</strong>)</li>  <li>Creación de plantillas WordPress desde cero (<strong>HTML5</strong>, <strong>Sass</strong>, <strong>Bootstrap</strong>). Adaptación de parte de lo maquetado a archivos PHP</li>  <li>Creación de webs con plantillas WordPress prediseñadas, tocando archivos <strong>PHP</strong>, <strong>JavaScript</strong>, <strong>jQuery</strong>, <strong>CSS</strong> y el personalizador de la plantilla o del <strong>WordPress</strong> según las necesidades del cliente.</li>  <li>Diseño de páginas web y landings con <strong>Photoshop</strong> y <strong>Figma</strong></li></ul>",
           "imageUrl": "icons/mai-icon.png",
           "tools": [
             "HTML5",
@@ -23,8 +23,8 @@
         {
           "title": "<strong>Diseño gráfico y web</strong>",
           "date": "2016 - 2017 (1 año)",
-          "company": "Natural Logistics",
-          "content": "<p>Maquetación y mantenimiento</p>",
+          "company": "<strong>Natural Logistics</strong> | Madrid",
+          "content": "<ul><li>Diseño y maquetación de banners, landing pages, newsletters y sitios web e-commerce (<strong>magento</strong>, <strong>html5</strong>, <strong>css3</strong>, <strong>bootstrap</strong>, <strong>jquery</strong>)</li><li>Diseño y creación de folletos, manuales, etiquetas, packaging,... (<strong>Illustrator</strong>, <strong>photoshop</strong>)</li><li>Fotografía de productos (<strong>photoshop</strong>) y creación de vídeos (<strong>premiere</strong>)</li></ul>",
           "imageUrl": "icons/mai-icon.png",
           "tools": [
             "HTML5",
@@ -40,8 +40,8 @@
         {
           "title": "<strong>Diseño web</strong>",
           "date": "2016 (3 meses)",
-          "company": "Bikuma Global Services",
-          "content": "<p>Maquetación y mantenimiento</p>",
+          "company": "<strong>Bikuma Global Services</strong> | Bilbao",
+          "content": "<ul><li>Diseño y maquetación de sitios web (<strong>Drupal</strong>, <strong>html</strong>, <strong>css</strong>, <strong>bootstrap</strong>)</li></ul>",
           "imageUrl": "icons/mai-icon.png",
           "tools": [
             "HTML5",
@@ -58,28 +58,28 @@
         {
           "title": "Técnico superior de <strong>'Desarrollo de aplicaciones web'</strong>",
           "date": "2023 - Actualidad",
-          "company": "Ilerna | Online",
-          "content": "<p>",
+          "company": "<strong>Ilerna</strong> | Online",
+          "content": "",
           "imageUrl": "icons/mai-icon.png"
         },
         {
           "title": "Certificado de profesionalidad de <strong>'Confección y publicación de páginas web'</strong>",
           "date": "2015 (480 horas)",
-          "company": "Centro San Luis | Bilbao",
+          "company": "<strong>Centro San Luis</strong> | Bilbao",
           "content": "",
           "imageUrl": "icons/mai-icon.png"
         },
         {
           "title": "Técnico superior de <strong>'Artes plásticas y diseño en gráfica publicitaria'</strong>",
           "date": "2009 - 2013",
-          "company": "Instituto Ibarrekolanda | Bilbao",
+          "company": "<strong>Instituto Ibarrekolanda</strong> | Bilbao",
           "content": "",
           "imageUrl": "icons/mai-icon.png"
         },
         {
           "title": "Técnico superior de <strong>'Diseño y producción editorial'</strong>",
           "date": "2005 - 2007",
-          "company": "Instituto Mendizabala | Vitoria-Gasteiz",
+          "company": "<strong>Instituto Mendizabala</strong> | Vitoria-Gasteiz",
           "content": "",
           "imageUrl": "icons/mai-icon.png"
         }

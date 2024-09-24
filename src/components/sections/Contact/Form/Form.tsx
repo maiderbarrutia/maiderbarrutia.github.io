@@ -57,45 +57,45 @@ const MaiForm: React.FC = () => {
       onSubmit={handleSubmit}
     >
       {({ errors, touched }) => (
-        <Form className={styles['form']}>
-          <div className={styles['form-container']}>
-            <div className={styles['form-row']}>
-              <div className={styles['form-group']}>
+        <Form className={styles['contact-form']}>
+          <div className={styles['contact-form__container']}>
+            <div className={styles['contact-form__row']}>
+              <div className={styles['contact-form__group']}>
                 <Field
                   type="text"
                   name="name"
                   placeholder=" "
-                  className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+                  className={`${styles['contact-form__control']} ${touched.name && errors.name ? styles['contact-form__control--invalid'] : ''}`}
                 />
-                <label htmlFor="name" className={`${styles['form-label']} ${styles['required-input']}`}>Nombre</label>
-                <ErrorMessage name="name" component="div" className={styles['error']} />
+                <label htmlFor="name" className={`${styles['contact-form__label']} ${styles['contact-form__label--required']}`}>Nombre</label>
+                <ErrorMessage name="name" component="div" className={styles['contact-form__error']} />
               </div>
 
-              <div className={styles['form-group']}>
+              <div className={styles['contact-form__group']}>
                 <Field
                   type="email"
                   name="email"
                   placeholder=" "
-                  className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+                  className={`${styles['contact-form__control']} ${touched.name && errors.name ? styles['contact-form__control--invalid'] : ''}`}
                 />
-                <label htmlFor="email" className={`${styles['form-label']} ${styles['required-input']}`}>Correo Electrónico</label>
-                <ErrorMessage name="email" component="div" className={styles['error']} />
+                <label htmlFor="email" className={`${styles['contact-form__label']} ${styles['contact-form__label--required']}`}>Correo Electrónico</label>
+                <ErrorMessage name="email" component="div" className={styles['contact-form__error']} />
               </div>
             </div>
 
-            <div className={styles['form-group']}>
+            <div className={styles['contact-form__group']}>
               <Field
                 as="textarea"
                 name="message"
                 placeholder=" "
-                className={`${styles['form-control']} ${touched.name && errors.name ? styles['invalid'] : ''}`}
+                className={`${styles['contact-form__control']} ${touched.name && errors.name ? styles['contact-form__control--invalid'] : ''}`}
               />
-              <label htmlFor="message" className={`${styles['form-label']} ${styles['required-input']}`}>Mensaje</label>
-              <ErrorMessage name="message" component="div" className={styles['error']} />
+              <label htmlFor="message" className={`${styles['contact-form__label']} ${styles['contact-form__label--required']}`}>Mensaje</label>
+              <ErrorMessage name="message" component="div" className={styles['contact-form__error']} />
             </div>
           </div>
 
-          <Button type="submit" text="Enviar" className={styles['submit-button']}/>
+          <Button type="submit" text="Enviar" className={styles['contact-form__button']}/>
         </Form>
       )}
     </Formik>

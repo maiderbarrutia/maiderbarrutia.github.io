@@ -1,18 +1,10 @@
 @import '@assets/styles/main.scss';
 
-.timeline-container {
+.timeline__container {
   margin: 0 auto;
   padding: rem(20);
   max-width: $size-large;
 }
-
-h1 {
-  text-align: center;
-  margin-bottom: rem(20);
-  font-size: rem(32);
-  color: $main-black;
-}
-
 .timeline {
   position: relative;
   padding: rem(40) 0;
@@ -27,10 +19,10 @@ h1 {
     padding-left: rem(40);
     width: rem(20);
     height: 100%;
-    z-index: 29;
+    // z-index: 29;
   }
 
-  &-item{
+  &__item{
     position: relative;
     text-align: center;
     padding: rem(10) rem(20);
@@ -45,35 +37,86 @@ h1 {
     @media (min-width: $size-tablet){
       width: 50%;
     }
+  }
 
-    .circle{
-      width: rem(60);
-      height: rem(60);
-      border-radius: 50%;
-      border: 2px solid #5DAC6D;
-      background: #fff;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      top: rem(30);
-      z-index:31;
+  &__circle{
+    width: rem(60);
+    height: rem(60);
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    top: rem(30);
+    z-index:31;
+  }
+  
+  &__content {
+    background: $main-gray;
+    border: 1px solid $main-gray;
+    padding: rem(40) rem(20) rem(20);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    text-align: left;
+    max-width: rem(300);
+    position: relative;
+    z-index: 30;
+    width: auto;
+  }
+
+  &__title {
+    margin-top: 0;
+    font-size: rem(26);
+    line-height: rem(28);
+    color: $main-black;
+    margin-bottom: rem(10);
+    font-weight: 300;
+
+    strong{
+      font-weight: 400;
     }
+  }
+
+  &__company{
+    margin-bottom: rem(10);
+    text-transform: uppercase;
+    font-size: rem(14);
+  }
+  
+  &__date {
+    margin: rem(5) 0;
+    font-size: rem(16);
+    background: $main-black;
+    display: inline-block;
+    color: $white;
+    padding: rem(10) rem(20);
+  }
+  
+  &__tools-list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: rem(10);
+  }
+
+  &__tool-icon{
+    height: rem(35);
+    width: rem(35);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
   }
 }
 
 /* Elementos del timeline */
-.timeline-item {
-
+.timeline__item {
   &.left {
-
     @media (min-width: $size-tablet){
-      left: 0; /* Elementos alineados a la izquierda */
+      left: 0;
       text-align: right;
       padding-right: rem(60);
     }
 
     &:before {
-
       @media (min-width: $size-tablet){
         content: '';
         position: absolute;
@@ -84,8 +127,7 @@ h1 {
       }
     }
 
-    .circle {
-
+    .timeline__circle {
       @media (min-width: $size-tablet){
         position: absolute;
         right: rem(-63);
@@ -95,7 +137,6 @@ h1 {
   }
 
   &.right {
-
     @media (min-width: $size-tablet){
       left: 50%;
       text-align: left;
@@ -113,77 +154,12 @@ h1 {
       }
     }
 
-    .circle {
+    .timeline__circle {
 
       @media (min-width: $size-tablet){
         position: absolute;
         left: 0;
       }
     }
-  }
-}
-
-/* Contenido dentro de cada elemento del timeline */
-.content {
-  background: $main-gray;
-  border: 1px solid $main-gray;
-  padding: rem(40) rem(20) rem(20);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  text-align: left;
-  max-width: rem(300);
-  position: relative;
-  z-index: 30;
-  width: auto;
-
-  &__title {
-    margin-top: 0;
-    font-size: rem(26);
-    line-height: rem(28);
-    color: $main-black;
-    margin-bottom: rem(10);
-    font-weight: 300;
-
-    strong{
-      font-weight: 400;
-    }
-  }
-
-  &__date {
-    margin: rem(5) 0;
-    font-size: rem(16);
-    background: $main-black;
-    display: inline-block;
-    color: $white;
-    padding: rem(10) rem(20);
-  }
-
-  &__text{
-    ul{
-      padding: rem(20) 0 rem(20) rem(20);
-
-      li{
-        margin-bottom: rem(10);
-        list-style: disc;
-      }
-    }
-  }
-
-  p {
-    margin: rem(10) 0;
-  }
-
-  .tools-list{
-    display: flex;
-    flex-wrap: wrap;
-    gap: rem(10);
-  }
-
-  .tool-icon{
-    height: rem(35);
-    width: rem(35);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
   }
 }

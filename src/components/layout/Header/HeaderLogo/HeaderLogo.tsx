@@ -11,7 +11,7 @@ const HeaderLogo: React.FC<LogoProps> = ({ closeMenu}) => {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const handleHomeNavigation = () => {
+    const navigateToHomeTop = () => {
         if (location.pathname !== '/') {
             navigate('/');
         } else {
@@ -20,7 +20,7 @@ const HeaderLogo: React.FC<LogoProps> = ({ closeMenu}) => {
     };
 
     const handleClick = (link: string) => {
-        handleHomeNavigation();
+        navigateToHomeTop();
         closeMenu(link);
     };
 

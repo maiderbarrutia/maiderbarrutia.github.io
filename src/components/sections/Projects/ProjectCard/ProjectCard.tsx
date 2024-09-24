@@ -8,7 +8,7 @@ interface Project {
   id: number;
   title: string;
   category: string;
-  image: string;
+  mainImage: string;
   year: number;
   link: string;
   slug: string;
@@ -22,7 +22,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   
   return (
     <article className={styles["projects__card"]}>
-      <img src={getAssetSrc(project.image)} alt={project.title} className={styles['projects__card-image']}/>
+      <img src={getAssetSrc(project.mainImage)} alt={project.title} className={styles['projects__card-image']}/>
       <div className={styles["projects__card-info"]}>
         <h3 className={styles['projects__card-title']}>{project.title}</h3>
         <p className={styles['projects__card-year']}>{project.year}</p>

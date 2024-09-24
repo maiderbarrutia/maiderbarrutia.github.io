@@ -6,7 +6,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   className?: string;
   disabled?: boolean;
-  variant?: 'green' | 'black';
+  buttonStyle?: 'primaryColor' | 'black';
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -15,15 +15,17 @@ const Button: React.FC<ButtonProps> = ({
   type = 'button',
   className = '',
   disabled = false,
-  variant = 'green',
+  buttonStyle = 'primaryColor',
 }) => {
-  const variantClass = variant === 'green' ? styles['button--green'] : styles['button--black'];
+
+  // Determina la clase de variante basada en la prop variant
+  const buttonStyleClass = buttonStyle === 'primaryColor' ? styles['button--primaryColor'] : styles['button--black'];
 
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`${styles.button} ${variantClass} ${className}`}
+      className={`${styles.button} ${buttonStyleClass} ${className}`}
       disabled={disabled}
     >
       {text}
