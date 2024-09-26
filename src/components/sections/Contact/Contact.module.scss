@@ -10,5 +10,18 @@
             color: $main-black;
         }
     }
+
+    //Temporal
+
+    .img__container{
+        max-width: rem(600);
+        width: 100%;
+        margin: 0 auto rem(40);
+        
+        img {
+            width: 100%;
+        }
+    }
+    
     
 }

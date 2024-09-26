@@ -13,7 +13,7 @@ import Popup from '@components/common/Popup/Popup';
 interface Project {
   id: number;
   title: string;
-  category: string;
+  categoryName: string;
   client: string;
   year: number;
   specialty: string;
@@ -71,7 +71,7 @@ const ProjectDetail: React.FC = () => {
         <SectionHeader title={project.title} text={project.description} tag='h1' />
 
         <ul className={styles['project-detail__info']}>
-          {project.category && <li><strong>Categoria:</strong> {project.category}</li>}
+          {project.categoryName && <li><strong>Categoria:</strong> {project.categoryName}</li>}
           {project.specialty && <li><strong>Especialidad:</strong> {project.specialty}</li>}
           {project.client && <li><strong>Cliente:</strong> {project.client}</li>}
           {project.year && <li><strong>Año:</strong> {project.year}</li>}
@@ -91,8 +91,8 @@ const ProjectDetail: React.FC = () => {
           columnClassName={styles["project-detail__masonry-grid-column"]}
         >
           {project.images.map((image, index) => (
-            <div key={index} onClick={() => handleImageClick(index)}>
-              <img src={getAssetSrc(image)} alt={`Imagen ${index + 1}`} className={styles.projectImage} />
+            <div key={index} className={styles["project-detail__content"]} onClick={() => handleImageClick(index)}>
+              <img src={getAssetSrc(image)} alt={`Imagen ${project.title} ${index + 1}`} className={styles["project-detail__img"]} />
             </div>
           ))}
         </Masonry>

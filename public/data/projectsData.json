@@ -3,10 +3,11 @@
     {
       "id": 1,
       "title": "Piatto ristorante Italiano",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
       "specialty": "Identidad corporativa",
-      "technologies":["Photoshop"],
+      "technologies":["Illustrator"],
       "mainImage": "images/graphic-design/corporate-identity/piatto-restaurante/identidadPiatto.jpg",
       "images": [
         "images/graphic-design/corporate-identity/piatto-restaurante/identidadPiatto.jpg",
@@ -15,24 +16,31 @@
         "images/graphic-design/corporate-identity/piatto-restaurante/logoPiattoBlancoNegro.jpg",
         "images/graphic-design/corporate-identity/piatto-restaurante/stufferPiatto.jpg"
       ],
-      "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit turpis lacinia mus, luctus aenean tellus pellentesque imperdiet velit gravida cras semper donec, quisque et nostra dis enim diam lobortis mi lacus. Tortor venenatis ultricies nec egestas suscipit fusce diam luctus pulvinar, varius nulla est dictum scelerisque a velit laoreet felis, parturient sollicitudin magnis himenaeos gravida sociis euismod pellentesque. Dui proin orci vitae semper tortor ut porttitor sollicitudin, dignissim commodo euismod enim ultrices posuere vehicula scelerisque, eu in mi cubilia nam fusce ligula.",
+      "description": "",
       "year": 2011,
       "link": "../../src/pages/projects/projectDetails.tsx",
       "slug": "identidad-restaurante-piatto",
-      "url" : "https://github.com/maiderbarrutia",
+      "url" : "",
       "isPrivate": false
     },
     {
       "id": 2,
       "title": "Revista GrafiK",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Editorial",
+      "technologies":["Indesign", "Illustrator", "Photoshop"],
       "mainImage": "images/graphic-design/editorial/revista-grafik/revistaGauckler.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/editorial/revista-grafik/logo.jpg",
+        "images/graphic-design/editorial/revista-grafik/indiceRevista.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaBansky.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaBauhaus.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaGauckler.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaLehanneur.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaMuebles.jpg",
+        "images/graphic-design/editorial/revista-grafik/revistaSillas.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -44,14 +52,15 @@
     {
       "id": 3,
       "title": "Folleto Cámara de comercio de Bilbao",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Folleto de publicidad",
+      "technologies":["Indesign", "Illustrator"],
       "mainImage": "images/graphic-design/camara-comercio-bilbao/camara-comercio-bilbao.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/camara-comercio-bilbao/camara-comercio-bilbao-portada.jpg",
+        "images/graphic-design/camara-comercio-bilbao/camara-comercio-bilbao.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -63,14 +72,15 @@
     {
       "id": 4,
       "title": "Folleto Colonias 2010",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Folleto de publicidad",
+      "technologies":["Indesign", "Illustrator"],
       "mainImage": "images/graphic-design/colonias/coloniasInterior.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/colonias/coloniasExterior.jpg",
+        "images/graphic-design/colonias/coloniasInterior.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -82,14 +92,15 @@
     {
       "id": 5,
       "title": "Folleto Exponatur",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Folleto de publicidad",
+      "technologies":["Indesign", "Illustrator"],
       "mainImage": "images/graphic-design/exponatur/expoNaturCastellano.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/exponatur/expoNaturCastellano.jpg",
+        "images/graphic-design/exponatur/expoNaturEuskera.jpg"
       ],
       "description": "",
       "year": 2014,
@@ -101,14 +112,17 @@
     {
       "id": 6,
       "title": "Óptica Pop eye",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Identidad corporativa",
+      "technologies":["Indesign", "Illustrator"],
       "mainImage": "images/graphic-design/corporate-identity/pop-eye/popEye-logo.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/corporate-identity/pop-eye/popEye-logo.jpg",
+        "images/graphic-design/corporate-identity/pop-eye/portadaPopeye.jpg",
+        "images/graphic-design/corporate-identity/pop-eye/alternativasLogoPopeye.jpg",
+        "images/graphic-design/corporate-identity/pop-eye/investigacionPopeye.jpg"
       ],
       "description": "",
       "year": 2013,
@@ -120,14 +134,15 @@
     {
       "id": 7,
       "title": "Pack Zensación",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Identidad corporativa",
+      "technologies":["Indesign", "Illustrator"],
       "mainImage": "images/graphic-design/corporate-identity/zensacion/montaje-zensacion.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/corporate-identity/zensacion/logo-zensacion.jpg",
+        "images/graphic-design/corporate-identity/zensacion/montaje-zensacion.jpg"
       ],
       "description": "",
       "year": 2015,
@@ -139,14 +154,14 @@
     {
       "id": 8,
       "title": "Bodegas Ubide",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Identidad corporativa",
+      "technologies":["Indesign", "Illustrator", "Photoshop"],
       "mainImage": "images/graphic-design/corporate-identity/bodegas-ubide/papeleria-bodegas-ubide.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/corporate-identity/bodegas-ubide/papeleria-bodegas-ubide.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -158,14 +173,14 @@
     {
       "id": 9,
       "title": "Anuncios publicitarios",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Publicidad",
+      "technologies":["Photoshop"],
       "mainImage": "images/graphic-design/advertising/advertisements/advertisements.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/advertising/advertisements/advertisements.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -177,14 +192,14 @@
     {
       "id": 10,
       "title": "Carteles Aste nagusia y Jazzaldia",
-      "category": "Diseño gráfico",
+      "category": "graphic-design",
+      "categoryName": "Diseño gráfico",
       "client": "",
       "specialty": "",
-      "technologies":[],
+      "technologies":["Illustrator", "Photoshop"],
       "mainImage": "images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg",
       "images": [
-        "",
-        ""
+        "images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg"
       ],
       "description": "",
       "year": 2013,
@@ -196,14 +211,14 @@
     {
       "id": 11,
       "title": "Landing GasNature",
-      "category": "Diseño web",
+      "category": "web-design",
+      "categoryName": "Diseño web",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Landing page",
+      "technologies":["Photoshop"],
       "mainImage": "images/web-design/gasnature-landing.jpg",
       "images": [
-        "",
-        ""
+        "images/web-design/gasnature-landing.jpg"
       ],
       "description": "",
       "year": 2017,
@@ -215,14 +230,14 @@
     {
       "id": 12,
       "title": "Landing TCS",
-      "category": "Diseño web",
+      "category": "web-design",
+      "categoryName": "Diseño web",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Landing page",
+      "technologies":["Photoshop"],
       "mainImage": "images/web-design/tcs.jpg",
       "images": [
-        "",
-        ""
+        "images/web-design/tcs.jpg"
       ],
       "description": "",
       "year": 2017,
@@ -234,14 +249,14 @@
     {
       "id": 13,
       "title": "Landing traductor Itzulpen",
-      "category": "Diseño web",
+      "category": "web-design",
+      "categoryName": "Diseño web",
       "client": "",
-      "specialty": "",
-      "technologies":[],
+      "specialty": "Landing page",
+      "technologies":["Photoshop"],
       "mainImage": "images/web-design/traductor-web-itzulpen.png",
       "images": [
-        "",
-        ""
+        "images/web-design/traductor-web-itzulpen.png"
       ],
       "description": "",
       "year": 2018,
@@ -253,14 +268,16 @@
     {
       "id": 14,
       "title": "Web Araex",
-      "category": "Diseño web",
+      "category": "web-design",
+      "categoryName": "Diseño web",
       "client": "",
       "specialty": "",
-      "technologies":[],
+      "technologies":["Photoshop"],
       "mainImage": "images/web-design/araex/home-araex.png",
       "images": [
-        "",
-        ""
+        "images/web-design/araex/home-araex.png",
+        "images/web-design/araex/Gran sello2.jpg",
+        "images/web-design/araex/Gran sello3.jpg"
       ],
       "description": "",
       "year": 2013,
@@ -272,14 +289,15 @@
     {
       "id": 15,
       "title": "Floristeria Kimu Loradenda",
-      "category": "Desarrollo web",
+      "category": "web-development",
+      "categoryName": "Desarrollo web",
       "client": "",
       "specialty": "",
-      "technologies":[],
+      "technologies":["Wordpress", "CSS3"],
       "mainImage": "images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
       "images": [
-        "",
-        ""
+        "images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
+        "images/web-develop/kimuloradenda/kimuloradenda-web.jpg"
       ],
       "description": "",
       "year": 2013,
@@ -291,20 +309,20 @@
     {
       "id": 16,
       "title": "Vipernake",
-      "category": "Desarrollo web",
+      "category": "web-development",
+      "categoryName": "Desarrollo web",
       "client": "",
       "specialty": "",
-      "technologies":[],
+      "technologies":["Wordpress", "CSS3"],
       "mainImage": "images/web-develop/vipernake/vipernake-web.jpg",
       "images": [
-        "",
-        ""
+        "images/web-develop/vipernake/vipernake-web.jpg"
       ],
       "description": "",
       "year": 2021,
       "link": "../../src/pages/projects/projectDetails.tsx",
       "slug": "vipernake",
-      "url" : "",
+      "url" : "https://vipernake.com/es",
       "isPrivate": true
     }
   ]

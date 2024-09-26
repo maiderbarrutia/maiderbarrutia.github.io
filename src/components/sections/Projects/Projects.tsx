@@ -23,12 +23,6 @@ const CATEGORY_MAP: { [key: string]: string } = {
   'web-development': 'Desarrollo web'
 };
 
-const SPANISH_CATEGORY_MAP: { [key: string]: string } = {
-  'Diseño gráfico': 'graphic-design', // Mapeo directo para la comparación
-  'Diseño web': 'web-design',
-  'Desarrollo web': 'web-development'
-};
-
 const CATEGORIES = Object.keys(CATEGORY_MAP);
 
 const Projects: React.FC = () => {
@@ -68,7 +62,7 @@ const Projects: React.FC = () => {
   ? projects
   : projects.filter(project => 
       project.category === selectedCategory || 
-      project.category === SPANISH_CATEGORY_MAP[selectedCategory]
+      project.category === CATEGORY_MAP[selectedCategory]
     );
 
   const breakpointColumnsObj = {
