@@ -6,7 +6,7 @@
     text-align: center;
     line-height: rem(22);
 
-    a{
+    &__link{
         color: $white;
         text-decoration: none;
         font-weight: 400;

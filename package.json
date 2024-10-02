@@ -55,5 +55,6 @@
     "vite": "^5.4.1",
     "vite-imagetools": "^7.0.4",
     "vite-tsconfig-paths": "^5.0.1"
-  }
+  },
+  "homepage": "https://maiderbarrutia.github.io/"
 }

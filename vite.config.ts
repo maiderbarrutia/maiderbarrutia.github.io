@@ -18,6 +18,11 @@ export default defineConfig({
       '@data': path.resolve(__dirname, './public/data'),
     },
   },
+  // resolve: {
+  //   alias: {
+  //   "@": fileURLToPath(new URL("./src", import.meta.url)),
+  //   },
+  // },
   define: {
     'process.env': {
       EMAIL_USER: JSON.stringify(process.env.EMAIL_USER),

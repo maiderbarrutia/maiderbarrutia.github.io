@@ -1,7 +1,7 @@
 import styles from './Contact.module.scss'; 
 import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 // import ContactForm from './Form/Form';
-import ContactImg from '@assets/images/contact.jpg'
+import { getAssetSrc } from '@/utils/srcUtils';
 
 const Contact: React.FC = () => {
     return (
@@ -36,7 +36,7 @@ const Contact: React.FC = () => {
 
           
       <div className={styles['img__container']}>
-      <a href="mailto:maiderbarrutia@hotmail.com"><img src={ContactImg} alt="Contacto" /></a>
+      <a href="mailto:maiderbarrutia@hotmail.com"><img src={getAssetSrc('images/contact.jpg')} alt="Contacto" /></a>
       </div>
 
       </div>
