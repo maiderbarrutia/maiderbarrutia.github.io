@@ -1,0 +1,36 @@
+@import '@assets/styles/main.scss';
+
+.status-message{
+    padding: rem(15) rem(30);
+    color: $white;
+
+    &__overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba($main-black, 0.85);
+        z-index: 1000;
+    }
+
+    &__popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: $primary-color;
+        color: $white;
+        padding: rem(15) rem(30);
+        z-index: 1000;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    &--error{
+        background-color: $red;
+    }
+
+    &--success{
+        background-color: $primary-color;
+    }
+}

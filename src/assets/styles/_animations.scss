@@ -28,3 +28,14 @@
         scale: 100%;
     }
 }
+
+@keyframes hide{
+    from{
+        opacity: 1;
+        scale: 100%;
+    }
+    to{
+        opacity: 0;
+        scale: 25%;
+    }
+}

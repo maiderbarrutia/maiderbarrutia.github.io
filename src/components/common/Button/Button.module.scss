@@ -19,7 +19,7 @@
       background-color: $primary-color;
       color: $main-black;
 
-      &:hover {
+      &:not(:disabled):hover{
         background-color: $main-black;
         color: $white;
       }
@@ -29,10 +29,15 @@
       background-color: $main-black;
       color: $white;
 
-      &:hover {
+      &:not(:disabled):hover{
         background-color: $primary-color;
         color: $main-black;
       }
+    }
+
+    &[disabled]{
+      opacity: 0.5;
+      cursor: not-allowed;
     }
 
     

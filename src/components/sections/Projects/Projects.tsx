@@ -5,6 +5,7 @@ import Button from '@components/common/Button/Button';
 import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
 import SectionHeader from '@components/common/SectionHeader/SectionHeader';
+import useAuthContext from '@/hooks/useAuth';
 
 interface Project {
   id: number;
@@ -14,6 +15,7 @@ interface Project {
   year: number;
   link: string;
   slug: string;
+  isPrivate?: boolean;
 }
 
 const CATEGORY_MAP: { [key: string]: string } = {
@@ -25,10 +27,17 @@ const CATEGORY_MAP: { [key: string]: string } = {
 
 const CATEGORIES = Object.keys(CATEGORY_MAP);
 
-const Projects: React.FC = () => {
+interface ProjectsProps {
+  allowedRoles?: string[];
+}
+const roles = ['admin','viewer'];
+
+const Projects: React.FC<ProjectsProps> = ({ allowedRoles = roles }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [visibleProjects, setVisibleProjects] = useState<number>(6);
-  const [projects, setProjects] = useState<Project[]>([]); // State for projects
+  const [projects, setProjects] = useState<Project[]>([]); // Estado para los proyectos
+
+  const { isAuthenticated, isRoleAllowed } = useAuthContext(allowedRoles);
 
   useEffect(() => {
     const loadProjectsData = async () => {
@@ -58,30 +67,40 @@ const Projects: React.FC = () => {
     }
   };
 
-  const filteredProjects = selectedCategory === 'all'
-  ? projects
-  : projects.filter(project => 
-      project.category === selectedCategory || 
-      project.category === CATEGORY_MAP[selectedCategory]
-    );
+  const filteredProjects = projects.filter(project => {
+    const isVisible = !project.isPrivate || isAuthenticated;
+    const isRoleAllowedForProject = !project.isPrivate || (project.isPrivate && isRoleAllowed());
 
-  const breakpointColumnsObj = {
+    return isVisible && isRoleAllowedForProject && (selectedCategory === 'all' || project.category === selectedCategory);
+  });
+
+  const breakpointColumns = {
     default: 3,
     1100: 2,
     700: 1
   };
+
+  const sectionHeaderText = isAuthenticated && isRoleAllowed() 
+    ? (
+      <>
+        Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos 
+        que he abarcado a lo largo de mi carrera.
+      </>
+    ) 
+    : (
+      <>
+        Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos que he abarcado 
+        a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran en este sitio{' '}
+        <a href="mailto:maiderbarrutia@hotmail.com" className={styles['projects__link']}>¡contácta!</a>
+      </>
+    );
 
   return (
     <section id="projects" className={`${styles['projects']} ${styles['home-section']}`}>
       <div className={styles['section__container']}>
         <SectionHeader
           title="Trabajos"
-          text={
-            <>
-              Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos que he abarcado a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran en este sitio{' '}
-              <a href="mailto:maiderbarrutia@hotmail.com" className={styles['projects__link']}>¡contácta!</a>
-            </>
-          }
+          text={sectionHeaderText}
         />
 
         <CategoryNav 
@@ -96,7 +115,7 @@ const Projects: React.FC = () => {
         ) : (
           <>
             <Masonry
-              breakpointCols={breakpointColumnsObj}
+              breakpointCols={breakpointColumns}
               className={styles["projects__masonry-grid"]}
               columnClassName={styles["projects__masonry-grid-column"]}
             >
@@ -106,7 +125,7 @@ const Projects: React.FC = () => {
             </Masonry>
 
             {visibleProjects < filteredProjects.length && (
-              <Button text="Ver más" onClick={loadMoreProjects} className={styles['projects__load-more-button']}/>
+              <Button text="Ver más" onClick={loadMoreProjects} className={styles['projects__load-more-button']} />
             )}
           </>
         )}
@@ -116,3 +135,4 @@ const Projects: React.FC = () => {
 };
 
 export default Projects;
+

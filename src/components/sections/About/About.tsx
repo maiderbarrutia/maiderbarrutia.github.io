@@ -12,19 +12,15 @@ const About: React.FC = () => {
             title="Sobre mi"
             text={
               <>
-                <p>Desarrolladora web frontend con más de <strong>6 años de experiencia</strong>, 
+                Desarrolladora web frontend con más de <strong>6 años de experiencia</strong>, 
                 especializada en la maquetación de sitios web <strong>responsive</strong> con <strong>html5</strong>, 
                 <strong>css3</strong> y <strong>wordpress</strong>. Con amplios conocimientos en todo lo referido con el <strong>diseño gráfico</strong> y <strong>web</strong>. 
-                Actualmente formándome en <strong>Javascript</strong> para ampliar mis conocimientos en el área del desarrollo web. </p>
+                Actualmente formándome en <strong>Javascript</strong> para ampliar mis conocimientos en el área del desarrollo web.
               </>
             }
           />
 
           <Skills/>
-          {/* <p>Desarrolladora web frontend con más de <strong>6 años de experiencia</strong>, 
-          especializada en la maquetación de sitios web <strong>responsive</strong> con <strong>html5</strong>, 
-          <strong>css3</strong> y <strong>wordpress</strong>. Con amplios conocimientos en todo lo referido con el <strong>diseño gráfico</strong> y <strong>web</strong>. 
-          Actualmente formándome en <strong>Javascript</strong> para ampliar mis conocimientos en el área del desarrollo web. </p> */}
         </div>
 
         <Slider/>

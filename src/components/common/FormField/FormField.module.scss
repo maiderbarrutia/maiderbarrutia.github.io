@@ -1,0 +1,65 @@
+@import '@assets/styles/main.scss';
+
+.form-group{
+    width: 100%;
+    margin-bottom: rem(30);
+    position: relative;
+
+    input,
+    textarea {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        padding: rem(5) 0;
+        background-color: transparent;
+        outline: none;
+    }
+
+    textarea{
+        height: rem(100);
+        font-size: rem(16);
+    }
+
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .form-group__label{
+        top: rem(-20);
+        color: $main-black;
+        font-size: rem(12);
+    }
+
+    &__label--required::after {
+        content: "*";
+        color: #ccc;
+        font-size: rem(18);
+        margin-left: rem(5);
+    }
+        
+    :is(input:focus, input:not(:placeholder-shown), textarea:focus, textarea:not(:placeholder-shown)) ~ .form-group__label--required::after {
+        color: red;
+    }
+
+    &__label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $secondary-gray;
+        transition: all 0.3s ease;
+        pointer-events: none;
+        font-weight: 500;
+    }
+
+    &__control {
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        padding: 10px 0;
+        background-color: transparent;
+        outline: none;
+        border-radius: 0;
+    }
+
+    &__error {
+        color: red;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+}

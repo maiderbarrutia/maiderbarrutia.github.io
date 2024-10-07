@@ -5,34 +5,38 @@ import NavigationMenu from './NavigationMenu/NavigationMenu';
 import SocialLinks from './SocialLinks/SocialLinks';
 import styles from './Header.module.scss';
 import menuIcon from '@/assets/icons/menu-icon.svg';
+import LoginButton from './LoginButton/LoginButton';
+
 
 const Header: React.FC = () => {
     const location = useLocation(); //URL actual. Se usa para saber si estamos en la página principal o no.
     const navigate = useNavigate(); //Permite cambiar la URL del navegador y navegar entre diferentes páginas.
-    const MOBILE_BREAKPOINT = 576;
+    const MOBILE_BREAKPOINT = 768;
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isMobile, setIsMobile] = useState(window.innerWidth < MOBILE_BREAKPOINT);
     const [isScrolled, setIsScrolled] = useState(false);
-    const [selectedLink, setSelectedLink] = useState('#home');
+    const [selectedLink, setSelectedLink] = useState('#intro');
 
     const headerRef = useRef<HTMLElement | null>(null);
     const navRef = useRef<HTMLDivElement | null>(null);
 
+    
+
     // Funciones Comunes
     const closeMenu = (link: string) => {
-        setSelectedLink(link); //link seria #home, #about,... (depende de cual sea seleccionado)
+        setSelectedLink(link); //link seria #intro, #about,... (depende de cual sea seleccionado)
         if (isMobile) setIsMenuOpen(false);
     };
 
     const handleScrollToSection = (link: string) => {
         const headerHeight = headerRef.current ? headerRef.current.offsetHeight : 0;
-        const element = document.querySelector(link) as HTMLElement; //Encuentra el elemento en el DOM que coincide con #about, #home,...
+        const element = document.querySelector(link) as HTMLElement; //Encuentra el elemento en el DOM que coincide con #about, #intro,...
 
         if (element) {
             const topPosition = element.getBoundingClientRect().top + window.scrollY; //Coge la posición del elemento
             window.scrollTo({
-                top: link === '#home' ? 0 : topPosition - headerHeight,
+                top: link === '#intro' ? 0 : topPosition - headerHeight,
                 behavior: 'smooth',
             });
         }
@@ -44,8 +48,8 @@ const Header: React.FC = () => {
             const headerHeight = headerRef.current.offsetHeight;
             setIsScrolled(window.scrollY > headerHeight); //Actualiza el estado isScrolled dependiendo de si el scroll vertical (window.scrollY) ha superado la altura del header
 
-            const sections = ['#home', '#about', '#projects', '#experience', '#contact'];
-            let activeSection = '#home';
+            const sections = ['#intro', '#about', '#projects', '#experience', '#contact'];
+            let activeSection = '#intro';
 
             for (const section of sections) {
                 const element = document.querySelector(section) as HTMLElement;
@@ -89,7 +93,7 @@ const Header: React.FC = () => {
         if (location.pathname === '/' && location.state?.scrollTo) {
             handleScrollToSection(location.state.scrollTo);
         } else if (location.pathname === '/') {
-            handleScrollToSection('#home');
+            handleScrollToSection('#intro');
         }
     }, [location]);
 
@@ -153,6 +157,9 @@ const Header: React.FC = () => {
                         />
                     </nav>
                     <SocialLinks />
+                    <LoginButton/>
+
+                    
                 </div>
             </div>
         </header>

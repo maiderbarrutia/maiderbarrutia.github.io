@@ -1,0 +1,27 @@
+@import '@assets/styles/main.scss';
+
+.contact-form {
+  max-width: $size-desktop;
+  margin: 0 auto;
+
+  &__container{
+    margin-bottom: rem(60);
+  }
+
+  &__row {
+    @media (min-width: $size-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: rem(40);
+    }
+
+    &>*{
+      @media (min-width: $size-tablet) {
+        flex: 1;
+        width: 50%;
+      }
+    }
+  }
+
+}

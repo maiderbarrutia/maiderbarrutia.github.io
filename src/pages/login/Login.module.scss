@@ -1,0 +1,25 @@
+@import '@assets/styles/main.scss';
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    background-color: $main-gray;
+    color: $main-black; 
+
+    &-form{
+        max-width: $size-mobile;
+        margin: 0 auto;
+        padding: rem(20);
+    
+    }
+}
+
+
+
+
+
+

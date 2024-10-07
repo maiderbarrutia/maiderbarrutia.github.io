@@ -1,0 +1,28 @@
+@import '@assets/styles/main.scss';
+
+.loginButtons{
+    &__button{
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+    }
+
+    &__img{
+        width: rem(30);
+        
+        &:hover{
+            opacity: 0.7;
+        }
+    }
+      
+    &__user {
+        display: flex;
+        align-items: center;
+    }
+      
+    &__username {
+        font-weight: bold;
+        font-size: rem(14);
+    }
+      
+}

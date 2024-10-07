@@ -1,4 +1,4 @@
-import styles from './Home.module.scss'; 
+import styles from './Intro.module.scss'; 
 // import maiIcon from '@assets/icons/mai-icon.png'; 
 import Lamp from '@assets/icons/lamp.png'; 
 import Computer from '@assets/icons/computer.png'; 
@@ -11,18 +11,18 @@ import pdfUrl from '@assets/archives/cv-MaiderBarrutia.pdf';
 const Home: React.FC = () => {
 
     return (
-        <section id="home" className={`${styles['home']} ${styles['home-section']}`}>
+        <section id="intro" className={`${styles['intro']} ${styles['home-section']}`}>
             <CirclesBackground />
 
-            <div className={styles['header-content']}>
-                <div className={`${styles['container']} ${styles['header-content__info']}`}>
-                    <div className={`${styles['header-content__info-intro']}`}>
+            <div className={styles['intro-content']}>
+                <div className={`${styles['container']} ${styles['intro-content__info']}`}>
+                    <div className={`${styles['intro-content__info-intro']}`}>
                         {/* <AnimatedCharacter/> */}
-                        <p className={`${styles['header-content__info-text']} ${styles['typing']}`}>
+                        <p className={`${styles['intro-content__info-text']} ${styles['typing']}`}>
                             Hola! Mi nombre es <strong>Maider Barrutia</strong>
                         </p>
                     </div>
-                    <div className={styles['header-content__illustration']}>
+                    <div className={styles['intro-content__illustration']}>
                         <div className={styles['lamp-container']}>
                             <img src={Lamp} alt="Lamp illustration" className={styles['lamp-illustration']} />
                             <div className={styles['lamp-light']}></div>
