@@ -1,45 +1,90 @@
+// @import '@assets/styles/main.scss';
+
+// .button {
+//   display: block;
+//   margin: auto auto rem(20);
+//   border: none;
+//   padding: rem(10) rem(30);
+//   font-size: rem(14);
+//   cursor: pointer;
+//   text-transform: uppercase;
+//   font-weight: 600;
+
+//   @media (min-width: $size-tablet) {
+//     font-size: rem(16);
+//     padding: rem(15) rem(40);
+//   }
+
+//   &--primaryColor {
+//     background-color: $primary-color;
+//     color: $main-black;
+
+//     &:not(:disabled):hover {
+//       background-color: $main-black; // Color al hacer hover
+//       color: $white; // Color del texto al hacer hover
+//     }
+//   }
+  
+//   &--black {
+//     background-color: $main-black;
+//     color: $white;
+
+//     &:not(:disabled):hover {
+//       background-color: $primary-color; // Color al hacer hover
+//       color: $main-black; // Color del texto al hacer hover
+//     }
+//   }
+
+//   &--white {
+//     background-color: $white; // Color de fondo para el botón blanco
+//     color: $main-black; // Color del texto
+
+//     &:not(:disabled):hover {
+//       background-color: $main-black; // Color de fondo al hacer hover
+//       color: $white; // Color del texto al hacer hover
+//     }
+//   }
+
+//   &[disabled] {
+//     opacity: 0.5;
+//     cursor: not-allowed;
+//   }
+// }
+
 @import '@assets/styles/main.scss';
 
 .button {
-    display: block;
-    margin: auto auto rem(20);
-    border: none;
-    padding: rem(10) rem(30);
-    font-size: rem(14);
-    cursor: pointer;
-    text-transform: uppercase;
-    font-weight: 600;
+  display: block;
+  margin: auto auto rem(20);
+  border: none;
+  padding: rem(10) rem(30);
+  font-size: rem(14);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 600;
 
-    @media (min-width: $size-tablet) {
-      font-size: rem(16);
-      padding: rem(15) rem(40);
-    }
+  @media (min-width: $size-tablet) {
+    font-size: rem(16);
+    padding: rem(15) rem(40);
+  }
 
-    &--primaryColor {
-      background-color: $primary-color;
-      color: $main-black;
-
-      &:not(:disabled):hover{
-        background-color: $main-black;
-        color: $white;
-      }
-    }
-    
-    &--black {
-      background-color: $main-black;
-      color: $white;
-
-      &:not(:disabled):hover{
-        background-color: $primary-color;
-        color: $main-black;
-      }
-    }
-
-    &[disabled]{
-      opacity: 0.5;
-      cursor: not-allowed;
-    }
-
-    
-}
+  &--primaryColor {
+    background-color: $primary-color;
+    color: $main-black;
+  }
   
+  &--black {
+    background-color: $main-black;
+    color: $white;
+  }
+
+  &--white {
+    background-color: $white;
+    color: $main-black; 
+  }
+
+  &[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

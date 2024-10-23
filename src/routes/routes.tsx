@@ -7,7 +7,8 @@ import NotFound from '@pages/notFound/NotFound';
 import PrivacyPolicy from '@pages/privacyPolicy/PrivacyPolicy';
 import Login from '@/pages/login/Login';
 import { AuthProvider } from '@/context/AuthContext';
-// import PrivateRoute from '@/routes/PrivateRoute'; 
+import CookiesBanner from '@/components/common/CookiesBanner/CookiesBanner';
+import Cookies from '@/pages/cookiesPolicy/CookiesPolicy';
 
 const SiteRoutes: React.FC = () => {
   return (
@@ -23,6 +24,7 @@ const SiteRoutes: React.FC = () => {
             {/* Ruta para las demás páginas */}
             <Route path="/proyectos/:slug" element={<ProjectDetail />} />
             <Route path="/politica-de-privacidad" element={<PrivacyPolicy />} />
+            <Route path="/politica-de-cookies" element={<Cookies />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/login" element={<Login />} />
             {/* <Route path="/" element={<PrivateRoute />}>
@@ -30,6 +32,7 @@ const SiteRoutes: React.FC = () => {
             </Route> */}
           </Routes>
         </main>
+        <CookiesBanner />
         <Footer />
       </Router>
     </AuthProvider>

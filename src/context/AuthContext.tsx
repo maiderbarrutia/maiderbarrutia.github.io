@@ -23,10 +23,10 @@ interface AuthContextType {
 }
 
 const passwords: Password[] = [
-  { username: 'Admin', password: 'test', role: UserRole.Admin },
-  { username: 'User', password: 'test', role: UserRole.User },
-  { username: 'Editor', password: 'test', role: UserRole.Editor },
-  { username: 'Usuario', password: 'test', role: UserRole.Viewer },
+  { username: 'Admin', password: 'yd7mG34"5C!$', role: UserRole.Admin },
+  { username: 'User', password: 'yd7mG34"5C!$', role: UserRole.User },
+  { username: 'Editor', password: 'yd7mG34"5C!$', role: UserRole.Editor },
+  { username: 'Usuario', password: 'yd7mG34"5C!$', role: UserRole.Viewer },
 ];
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -78,7 +78,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 export const useAuth = (): AuthContextType => {
   const context = useContext(AuthContext);
   if (context === undefined) {
-    throw new Error('useAuth must be used within an AuthProvider');
+    throw new Error('useAuth debe usarse dentro de un AuthProvider');
   }
   return context;
 };

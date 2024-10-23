@@ -1,0 +1,38 @@
+@import '@assets/styles/main.scss';
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $main-black;
+  padding: rem(20);
+  text-align: center;
+  border-top: 1px solid #ccc;
+  z-index: 99;
+  color: $white;
+
+  p{
+    margin-bottom: rem(20);
+  }
+
+  &__link{
+    color: $primary-color;
+
+    &:hover{
+      color: $white;
+    }
+  }
+
+  &__buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: rem(10);
+  }
+
+  button{
+    margin: 0;
+    font-size: rem(14);
+  }
+}

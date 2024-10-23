@@ -1,26 +1,33 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
 import styles from './Timeline.module.scss';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
 import { getAssetSrc } from '@/utils/srcUtils'; 
 import Expandable from '@/components/common/Expandable/Expandable'; 
+import experienceData from '@data/experienceData.json';
 
-
-const CATEGORY_MAP: { [key: string]: string } = {
-  'experience': 'Experiencia',
-  'education': 'Educación'
-};
-
-const CATEGORIES = Object.keys(CATEGORY_MAP);
-
+// Define la estructura de un elemento de experiencia o educación
 interface TimelineItem {
   title: string;
   date: string;
   company: string;
   content: string;
   imageUrl: string;
-  tools: string[];
+  tools?: string[];
 }
+
+// Define la estructura de la respuesta del JSON
+interface ExperienceData {
+  experience: TimelineItem[][];
+  education: TimelineItem[][];
+}
+
+// Categorías
+const CATEGORY_MAP: { [key: string]: string } = {
+  experience: 'Experiencia',
+  education: 'Educación'
+};
+
+const CATEGORIES = Object.keys(CATEGORY_MAP);
 
 interface TimelineProps {
   category: string;
@@ -35,40 +42,10 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
     setSelectedCategory(category);
   };
 
-  // useEffect(() => {
-  //   const loadTimelineData = async () => {
-  //     try {
-  //       const response = await fetch('/data/experienceData.json');
-  //       if (!response.ok) {
-  //         throw new Error('Error en la respuesta');
-  //       }
-  //       const data = await response.json();
-
-  //       // Filtra los datos según la categoría seleccionada
-  //       const filteredItems = data[selectedCategory]?.flat() || [];
-  //       setTimelineData(filteredItems);
-  //     } catch (error) {
-  //       console.error('Error cargando los datos del timeline:', error);
-  //     }
-  //   };
-
-  //   loadTimelineData();
-  // }, [selectedCategory]);
-
   useEffect(() => {
-    const loadTimelineData = async () => {
-      try {
-        const response = await axios.get('/data/experienceData.json');
-
-        // Filtra los datos según la categoría seleccionada
-        const filteredItems = response.data[selectedCategory]?.flat() || [];
-        setTimelineData(filteredItems);
-      } catch (error) {
-        console.error('Error cargando los datos del timeline:', error);
-      }
-    };
-
-    loadTimelineData();
+    const data = experienceData as ExperienceData;
+    const filteredItems = data[selectedCategory as keyof ExperienceData]?.flat() || [];
+    setTimelineData(filteredItems);
   }, [selectedCategory]);
 
   return (
@@ -78,7 +55,6 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
         selectedCategory={CATEGORY_MAP[selectedCategory]}
         onCategoryClick={(category) => filterProjects(Object.keys(CATEGORY_MAP).find(key => CATEGORY_MAP[key] === category) || '')} 
         className='experienceCategory'
-        
       />
       <div className={styles['timeline']}>
         {timelineData.map((item, index) => (
@@ -98,16 +74,15 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
               <ul className={styles['timeline__tools-list']}>
                 {Array.isArray(item.tools) && item.tools.length > 0 && (
                   item.tools.map((tool) => (
-                      <li key={tool} className={styles['timeline__tool']}>
-                        <div
-                          title={tool}
-                          className={styles['timeline__tool-icon']}
-                          style={{ backgroundImage: `url(${getAssetSrc(`icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png`)})` }}
-                        />
-                      </li>
-                    ))
-                  )
-                }
+                    <li key={tool} className={styles['timeline__tool']}>
+                      <div
+                        title={tool}
+                        className={styles['timeline__tool-icon']}
+                        style={{ backgroundImage: `url(${getAssetSrc(`icons/tools/${tool.toLowerCase().replace(/\s/g, '-')}-icon.png`)})` }}
+                      />
+                    </li>
+                  ))
+                )}
               </ul>
             </div>
           </div>

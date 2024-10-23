@@ -6,6 +6,7 @@ import ProjectCard from './ProjectCard/ProjectCard';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
 import SectionHeader from '@components/common/SectionHeader/SectionHeader';
 import useAuthContext from '@/hooks/useAuth';
+import projectsData from '@data/projectsData.json';
 
 interface Project {
   id: number;
@@ -40,14 +41,9 @@ const Projects: React.FC<ProjectsProps> = ({ allowedRoles = roles }) => {
   const { isAuthenticated, isRoleAllowed } = useAuthContext(allowedRoles);
 
   useEffect(() => {
-    const loadProjectsData = async () => {
+    const loadProjectsData = () => {
       try {
-        const response = await fetch('/data/projectsData.json');
-        if (!response.ok) {
-          throw new Error('Error en la respuesta al cargar los proyectos');
-        }
-        const data: Project[] = await response.json();
-        setProjects(data);
+        setProjects(projectsData);
       } catch (error) {
         console.error('Error cargando los datos de proyectos:', error);
       }
@@ -90,7 +86,7 @@ const Projects: React.FC<ProjectsProps> = ({ allowedRoles = roles }) => {
     : (
       <>
         Aquí se muestran algunos proyectos realizados por mí en los diferentes ámbitos que he abarcado 
-        a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran en este sitio{' '}
+        a lo largo de mi carrera. Si desea ver más ejemplos de mi trabajo que los que se muestran actualmente{' '}
         <a href="mailto:maiderbarrutia@hotmail.com" className={styles['projects__link']}>¡contácta!</a>
       </>
     );
