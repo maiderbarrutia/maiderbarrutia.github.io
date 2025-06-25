@@ -115,9 +115,13 @@ const Projects: React.FC<ProjectsProps> = ({ allowedRoles = roles }) => {
               className={styles["projects__masonry-grid"]}
               columnClassName={styles["projects__masonry-grid-column"]}
             >
-              {filteredProjects.slice(0, visibleProjects).map((project) => (
+              {filteredProjects
+              .sort((a, b) => b.year - a.year)
+              .slice(0, visibleProjects)
+              .map((project) => (
                 <ProjectCard key={project.id} project={project} />
-              ))}
+            ))}
+
             </Masonry>
 
             {visibleProjects < filteredProjects.length && (

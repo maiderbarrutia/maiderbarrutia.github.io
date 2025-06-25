@@ -178,9 +178,9 @@
       "client": "",
       "specialty": "Publicidad",
       "technologies":["Photoshop"],
-      "mainImage": "images/graphic-design/advertising/advertisements/advertisements.jpg",
+      "mainImage": "images/graphic-design/advertisements/advertisements.jpg",
       "images": [
-        "images/graphic-design/advertising/advertisements/advertisements.jpg"
+        "images/graphic-design/advertisements/advertisements.jpg"
       ],
       "description": "",
       "year": 2012,
@@ -197,9 +197,9 @@
       "client": "",
       "specialty": "",
       "technologies":["Illustrator", "Photoshop"],
-      "mainImage": "images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg",
+      "mainImage": "images/graphic-design/carteles-jazzaldia-aste-nagusia.jpg",
       "images": [
-        "images/graphic-design/advertising/posters/carteles-jazzaldia-aste-nagusia.jpg"
+        "images/graphic-design/carteles-jazzaldia-aste-nagusia.jpg"
       ],
       "description": "",
       "year": 2013,
@@ -293,7 +293,7 @@
       "categoryName": "Desarrollo web",
       "client": "",
       "specialty": "",
-      "technologies":["Wordpress", "CSS3"],
+      "technologies":["Wordpress", "HTML5", "CSS3"],
       "mainImage": "images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
       "images": [
         "images/web-develop/kimuloradenda/kimuloradenda-header.jpg",
@@ -313,17 +313,41 @@
       "categoryName": "Desarrollo web",
       "client": "",
       "specialty": "",
-      "technologies":["Wordpress", "CSS3"],
+      "technologies":["Wordpress", "HTML5", "CSS3", "Photoshop", "Illustrator", "jquery"],
       "mainImage": "images/web-develop/vipernake/vipernake-web.jpg",
       "images": [
         "images/web-develop/vipernake/vipernake-web.jpg"
       ],
-      "description": "",
+      "description": "Proyecto integral de identidad visual y desarrollo digital. Se trabajó desde la creación del logotipo, construyendo una imagen sólida y alineada con los valores de la marca. A partir de ahí, se definió una identidad corporativa completa, incluyendo paleta de colores, tipografías, aplicaciones gráficas y papelería (cajas del producto, manual de instrucciones, etc.). La fase digital incluyó el diseño y desarrollo completo del sitio web eCommerce, con una navegación intuitiva, diseño responsive, integración de carrito de compra, pasarelas de pago y panel de administración para la gestión de productos.",
       "year": 2021,
       "link": "../../src/pages/projects/projectDetails.tsx",
       "slug": "vipernake",
       "url" : "https://vipernake.com/es",
       "isPrivate": true
+    },
+    {
+      "id": 17,
+      "title": "Aisiplan",
+      "category": "web-development",
+      "categoryName": "Desarrollo web",
+      "client": "",
+      "specialty": "",
+      "technologies":["TypeScript", "React.js", "MySQL", "Vite", "SASS", "Node.js", "Express", "Postman", "Git", "Github", "Figma", "Notion", "Trello"],
+      "mainImage": "images/web-develop/aisiplan/cabecera-sin-login.jpg",
+      "images": [
+        "images/web-develop/aisiplan/pagina-inicio.jpg",
+        "images/web-develop/aisiplan/pagina-inicio-sesion.jpg",
+        "images/web-develop/aisiplan/pagina-actividades.jpg",
+        "images/web-develop/aisiplan/pagina-detalle-actividades.jpg",
+        "images/web-develop/aisiplan/pagina-perfil.jpg",
+        "images/web-develop/aisiplan/formularios.jpg"
+      ],
+      "description": "Plataforma para la gestión de actividades de ocio y tiempo libre",
+      "year": 2025,
+      "link": "../../src/pages/projects/projectDetails.tsx",
+      "slug": "aisiplan",
+      "url" : "https://aisiplan.vercel.app/",
+      "isPrivate": false
     }
   ]
   

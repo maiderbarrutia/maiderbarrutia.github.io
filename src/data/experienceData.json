@@ -2,6 +2,35 @@
     "experience": [
       [
         {
+          "title": "<strong>Diseño y desarrollo web</strong>",
+          "date": "2023 - Actualidad",
+          "company": "<strong>Freelance</strong> | Online",
+          "content": "<ul><li>Diseño y desarrollo de sitios web y tiendas online completas</li></ul>",
+          "imageUrl": "icons/mai-icon.png",
+          "tools": [
+            "HTML5",
+            "Sass",
+            "CSS3",
+            "Bootstrap",
+            "Jquery",
+            "Git",
+            "Javascript ES6",
+            "TypeScript",
+            "Wordpress",
+            "Figma",
+            "Trello",
+            "Photoshop",
+            "React",
+            "MySQL",
+            "Node",
+            "Express",
+            "Vite",
+            "Postman",
+            "Notion",
+            "Github"
+          ]
+        },
+        {
           "title": "<strong>Desarrolladora web frontend</strong>",
           "date": "2017 - 2023 (6 años)",
           "company": "<strong>Corus Consulting</strong> | Madrid",
@@ -57,8 +86,8 @@
       [
         {
           "title": "Técnico superior de <strong>'Desarrollo de aplicaciones web'</strong>",
-          "date": "2023 - Actualidad",
-          "company": "<strong>Ilerna</strong> | Online",
+          "date": "2023 - 2025",
+          "company": "<strong>Ilerna online</strong> | Online",
           "content": "",
           "imageUrl": "icons/mai-icon.png"
         },
@@ -73,13 +102,6 @@
           "title": "Técnico superior de <strong>'Artes plásticas y diseño en gráfica publicitaria'</strong>",
           "date": "2009 - 2013",
           "company": "<strong>Instituto Ibarrekolanda</strong> | Bilbao",
-          "content": "",
-          "imageUrl": "icons/mai-icon.png"
-        },
-        {
-          "title": "Técnico superior de <strong>'Diseño y producción editorial'</strong>",
-          "date": "2005 - 2007",
-          "company": "<strong>Instituto Mendizabala</strong> | Vitoria-Gasteiz",
           "content": "",
           "imageUrl": "icons/mai-icon.png"
         }
