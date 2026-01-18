@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styles from './Timeline.module.scss';
 import CategoryNav from '@components/common/CategoryNav/CategoryNav';
-import { getAssetSrc } from '@/utils/srcUtils'; 
+// import { getAssetSrc } from '@/utils/srcUtils'; 
 import Expandable from '@/components/common/Expandable/Expandable'; 
 import experienceData from '@data/experienceData.json';
 
@@ -10,7 +10,7 @@ interface TimelineItem {
   title: string;
   date: string;
   company: string;
-  content: string;
+  tasks?: string[];
   imageUrl: string;
   tools?: string[];
 }
@@ -63,15 +63,19 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
             className={`${styles['timeline__item']} ${index % 2 === 0 ? styles['left'] : styles['right']}`}
           >
             <div className={styles['timeline__circle']}>
-              <img src={getAssetSrc(item.imageUrl)} alt={`${item.title} image`} />
+              {/* <img src={getAssetSrc(item.imageUrl)} alt={`${item.title} image`} /> */}
+              <div className={styles['circle']}></div>
             </div>
             <div className={styles['timeline__content']}>
               <h2 className={styles['timeline__title']} dangerouslySetInnerHTML={{ __html: item.title }}></h2>
               <h3 className={styles['timeline__company']} dangerouslySetInnerHTML={{ __html: item.company }}></h3>
               <div className={styles['timeline__date']}>{item.date}</div>
-              <Expandable content={item.content} />
+              {item.tasks && item.tasks.length > 0 && (
+                <Expandable content={item.tasks} />
+              )}
+
               
-              <ul className={styles['timeline__tools-list']}>
+              {/* <ul className={styles['timeline__tools-list']}>
                 {Array.isArray(item.tools) && item.tools.length > 0 && (
                   item.tools.map((tool) => (
                     <li key={tool} className={styles['timeline__tool']}>
@@ -83,7 +87,7 @@ const Timeline: React.FC<TimelineProps> = ({ category }) => {
                     </li>
                   ))
                 )}
-              </ul>
+              </ul> */}
             </div>
           </div>
         ))}

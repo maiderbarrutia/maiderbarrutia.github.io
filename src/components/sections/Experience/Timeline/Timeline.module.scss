@@ -43,12 +43,13 @@
     width: rem(60);
     height: rem(60);
     border-radius: 50%;
-    border: 2px solid $primary-color;
+    border: 2px dotted $white;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: rem(30);
     z-index:31;
+    background-color: $primary-color;
   }
   
   &__content {
@@ -61,7 +62,7 @@
     max-width: rem(300);
     position: relative;
     z-index: 30;
-    width: auto;
+    width: 100%;
   }
 
   &__title {
@@ -132,6 +133,7 @@
         position: absolute;
         right: rem(-63);
         left: auto;
+
       }
     }
   }

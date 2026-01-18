@@ -71,7 +71,7 @@ const ToolsCarousel = () => {
             margin: 0;
             padding: 0 20px 0 0;
             left: 0;
-            background: #5DAC6D;
+            background: transparent;
         }
         .swiper-button-next {
             height: 100%;
@@ -79,7 +79,7 @@ const ToolsCarousel = () => {
             margin: 0;
             padding: 0 0 0 20px;
             right: 0;
-            background: #5DAC6D;
+            background: transparent;
         }
         `}
       </style>

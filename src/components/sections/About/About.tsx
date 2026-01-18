@@ -12,8 +12,8 @@ const About: React.FC = () => {
             title="Sobre mi"
             text={
               <>
-                <strong>Desarrolladora web frontend</strong> con más de 6 años de experiencia, especializada en <strong>HTML5</strong>, <strong>CSS3</strong>, <strong>JavaScript</strong> y <strong>WordPress</strong>, con conocimientos en <strong>diseño gráfico</strong> y <strong>web</strong>. Actualmente ampliando habilidades en <strong>programación</strong> y <strong>bases de datos</strong> para fortalecer mi perfil en el área del <strong>desarrollo web</strong>. 
-                Responsable, meticulosa y proactiva, con capacidad de trabajo en equipo y enfoque en aprendizaje continuo para crecer profesionalmente.
+                <strong>Desarrolladora frontend</strong> con más de 6 años de experiencia creando interfaces web modernas, accesibles y optimizadas. 
+                Experiencia combinando desarrollo y diseño para lograr soluciones digitales atractivas y funcionales.
               </>
             }
           />

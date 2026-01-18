@@ -8,6 +8,9 @@ const Skills: React.FC = () => {
             <li>Autodidacta</li>
             <li>Curiosa</li>
             <li>Resolutiva</li>
+            <li>Comunicación</li>
+            <li>Adaptabilidad tecnológica</li>
+
         </ul>
       </div>
     )
