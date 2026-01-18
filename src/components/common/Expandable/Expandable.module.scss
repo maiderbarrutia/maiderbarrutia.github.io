@@ -1,4 +1,6 @@
-@import '@assets/styles/main.scss';
+@use '@assets/styles/main' as *;
+
+
 
 .expandable {
     margin: rem(10) 0;

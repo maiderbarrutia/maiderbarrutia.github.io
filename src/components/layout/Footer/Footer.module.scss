@@ -1,4 +1,6 @@
-@import '@assets/styles/main.scss';
+@use '@assets/styles/main' as *;
+
+
 .footer{
     background-color: $main-black;
     color: $white;

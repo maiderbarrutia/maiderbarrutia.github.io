@@ -21,7 +21,6 @@ $tools-images: (
     background-repeat: no-repeat;
     background-position: center;
   } @else {
-    // Fallback image if tool is not found
-    background-color: #ccc; // Or any placeholder style
+    background-color: #ccc;
   }
 }

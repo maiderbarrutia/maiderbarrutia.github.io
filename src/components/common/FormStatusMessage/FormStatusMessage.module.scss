@@ -1,4 +1,6 @@
-@import '@assets/styles/main.scss';
+@use '@assets/styles/main' as *;
+
+
 
 .status-message{
     padding: rem(15) rem(30);
