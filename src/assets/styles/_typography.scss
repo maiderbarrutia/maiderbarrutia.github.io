@@ -1,5 +1,5 @@
 // typography.scss
-@use './fonts' as *;
+@import './fonts';
 
 /* Typography */
 $default-fonts: Helvetica, Arial, sans-serif;

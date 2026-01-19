@@ -1,7 +1,2 @@
-@forward './reset';
-@forward './variables';
-@forward './typography';
-@forward './mixins';
-@forward './functions';
-@forward './animations';
-@forward './general';
+
+@import './general';

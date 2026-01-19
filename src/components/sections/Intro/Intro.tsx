@@ -39,7 +39,6 @@ const Home: React.FC = () => {
                         <h1 className={styles['professional-profile__occupation']}>Desarrolladora web frontend</h1>
                         <div className={styles['cv-button']}>
                             <a className={styles['cv-button__link']} href={pdfUrl} download="cv-MaiderBarrutia.pdf">
-                                {/* <img className={styles['cv-button__img']} src={cvIcon} title='Descargar Curriculum' alt="Curriculum" height="35" width="35" /> */}
                                 CV
                             </a>
                         </div>
