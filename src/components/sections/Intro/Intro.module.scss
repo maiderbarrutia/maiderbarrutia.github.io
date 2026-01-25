@@ -44,57 +44,57 @@
     }
   }
 
-  &__illustration{
-    display: none;
+  // &__illustration{
+  //   display: none;
 
-    @media (min-width: $size-desktop){
-      display: flex;
-      align-items: baseline;
-      gap: rem(10);
-    }
+  //   @media (min-width: $size-desktop){
+  //     display: flex;
+  //     align-items: baseline;
+  //     gap: rem(10);
+  //   }
 
-    .lamp-container{
-      position: relative;
-    }
+    // .lamp-container{
+    //   position: relative;
+    // }
 
-    .lamp-illustration{
-      width: rem(144);
-    }
+    // .lamp-illustration{
+    //   width: rem(144);
+    // }
   
-    .lamp-light {
-      position: absolute;
-      top: 21px;
-      left: -445px;
-      width: 500px;
-      height: 182px;
-      background: linear-gradient(
-        to bottom,
-        rgba(255, 255, 120, 0.8) 0%,
-        rgba(255, 255, 120, 0.4) 60%,
-        rgba(255, 255, 120, 0.1) 90%  
-      );
-      clip-path: polygon(
-        89% 1%, 
-        96% 26%, 
-        74% 100%, 
-        0px 100%
-      );
-      pointer-events: none;
-    }
+    // .lamp-light {
+    //   position: absolute;
+    //   top: 21px;
+    //   left: -445px;
+    //   width: 500px;
+    //   height: 182px;
+    //   background: linear-gradient(
+    //     to bottom,
+    //     rgba(255, 255, 120, 0.8) 0%,
+    //     rgba(255, 255, 120, 0.4) 60%,
+    //     rgba(255, 255, 120, 0.1) 90%  
+    //   );
+    //   clip-path: polygon(
+    //     89% 1%, 
+    //     96% 26%, 
+    //     74% 100%, 
+    //     0px 100%
+    //   );
+    //   pointer-events: none;
+    // }
 
-    .computer-illustration{
-      width: rem(260);
-      position: relative;
-      right: rem(-70);
-    }
+    // .computer-illustration{
+    //   width: rem(260);
+    //   position: relative;
+    //   right: rem(-70);
+    // }
 
-    .mobile-illustration{
-      width: rem(65);
-      position: relative;
-      right: 0;
-      bottom: rem(60);
-    }
-  }
+    // .mobile-illustration{
+    //   width: rem(65);
+    //   position: relative;
+    //   right: 0;
+    //   bottom: rem(60);
+    // }
+  // }
 }
 .professional-profile{
   background-color: $primary-color;
@@ -115,12 +115,13 @@
   }
 
   &__occupation{
-    font-size: rem(40);
+    font-size: rem(30);
     font-family: $secondary-font;
-    color: $main-black;
+    color: $white;
+    text-transform: uppercase;
 
     @media (min-width: $size-mobile){
-      font-size: rem(54);
+      font-size: rem(40);
     }
   }
 

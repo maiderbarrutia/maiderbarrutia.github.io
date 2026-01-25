@@ -12,6 +12,11 @@
         cursor: pointer;
     }
 
+    img{
+        width: rem(60);
+        height: rem(60);
+    }
+
     &-text{
         font-size: rem(18);
         font-weight: bold;

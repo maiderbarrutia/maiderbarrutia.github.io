@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getAssetSrc } from '@/utils/srcUtils';
-import projectsData from '@data/projectsData.json';
+// import projectsData from '@data/projectsData.json';
+import projectsData from '@data/projectsData.json' assert { type: 'json' };
 import styles from './ProjectDetail.module.scss';
 import NotFoundPage from '@pages/notFound/NotFound';
 import useHeaderHeight from '@/hooks/useDynamicHeaderHeight';

@@ -27,7 +27,7 @@ const HeaderLogo: React.FC<LogoProps> = ({ closeMenu}) => {
     return (
         <div className={styles.header__logo}>
             <a className={styles['header__logo-link']} onClick={() => handleClick('/')} style={{ cursor: 'pointer' }}>
-                <img src={maiIcon} height="60" width="58.79" alt="icono Mai" />
+                <img src={maiIcon} height="60" width="60" alt="icono Maider Barrutia" />
                 <p className={styles['header__logo-text']}>maiWeb</p>
             </a>
         </div>

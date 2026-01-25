@@ -12,8 +12,7 @@ const About: React.FC = () => {
             title="Sobre mi"
             text={
               <>
-                <strong>Desarrolladora frontend</strong> con más de 6 años de experiencia creando interfaces web modernas, accesibles y optimizadas. 
-                Experiencia combinando desarrollo y diseño para lograr soluciones digitales atractivas y funcionales.
+                Desarrolladora frontend con sólida experiencia en maquetación web responsive, creando interfaces web modernas, accesibles, optimizadas y visualmente atractivas.
               </>
             }
           />

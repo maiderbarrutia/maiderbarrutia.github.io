@@ -4,13 +4,11 @@ const Skills: React.FC = () => {
     return (
       <div className={styles['skills']}>
         <ul className={styles['skills-list']}>
-            <li>Creativa</li>
+            <li>Creatividad</li>
+            <li>Investigación técnica</li>
+            <li>Resolución de problemas</li>
             <li>Autodidacta</li>
-            <li>Curiosa</li>
-            <li>Resolutiva</li>
-            <li>Comunicación</li>
-            <li>Adaptabilidad tecnológica</li>
-
+            <li>Adaptación rápida</li>
         </ul>
       </div>
     )

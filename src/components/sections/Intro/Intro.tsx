@@ -36,7 +36,7 @@ const Home: React.FC = () => {
 
                 <div className={styles['professional-profile']}>
                     <div className={`${styles['container']} ${styles['professional-profile__container']}`}>
-                        <h1 className={styles['professional-profile__occupation']}>Desarrolladora web frontend</h1>
+                        <h1 className={styles['professional-profile__occupation']}>Frontend developer</h1>
                         <div className={styles['cv-button']}>
                             <a className={styles['cv-button__link']} href={pdfUrl} download="cv-MaiderBarrutia.pdf">
                                 CV
