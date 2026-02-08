@@ -1,3 +1,2 @@
 User-agent: *
-Disallow: /private/      # bloquea el acceso a una carpeta privada
 Allow: /
